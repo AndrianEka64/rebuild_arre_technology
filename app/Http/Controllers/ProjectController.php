@@ -95,27 +95,30 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'nama' => 'required',
-            'deskripsi' => 'required',
-            'image' => 'required|mimes:png,jpg,jpeg|max:2048'
-        ]);
-        $data = project::find($id);
-        if ($request->hasFile('image')) {
-            if ($data->image && file_exists(public_path('image/' . $data->image))) {
-                unlink(public_path('image/' . $data->image));
+        try {
+            $request->validate([
+                'nama' => 'required',
+                'deskripsi' => 'required',
+                'image' => 'required|mimes:png,jpg,jpeg|max:2048'
+            ]);
+            $data = project::find($id);
+            if ($request->hasFile('image')) {
+                if ($data->image && file_exists(public_path('image/' . $data->image))) {
+                    unlink(public_path('image/' . $data->image));
+                }
+                $file = $request->file('image');
+                $extensi = $file->getClientOriginalExtension();
+                $fileName = time() . '.' . $extensi;
+                $file->move(public_path('image'), $fileName);
+                $data->image = $fileName;
             }
-            $file = $request->file('image');
-            $extensi = $file->getClientOriginalExtension();
-            $fileName = time() . '.' . $extensi;
-            $file->move(public_path('image'), $fileName);
-            $data->image = $fileName;
+            $data->nama_project = $request->nama;
+            $data->deskripsi_project = $request->deskripsi;
+            $data->save();
+            return redirect('/dashboard/table')->with('success', 'Project berhasil diupdate!');
+        } catch (\Exception $th) {
+            return redirect('/dashboard/table')->with('error', 'Project gagal diupdate!');
         }
-        $data->nama_project = $request->nama;
-        $data->deskripsi_project = $request->deskripsi;
-        $data->save();
-        return redirect('/dashboard/table');
-
     }
 
     /**
