@@ -133,7 +133,7 @@
                         <h1 class="h3 me-auto text-gray-800">Tabel Data Project</h1>
                         <button type="button" class="btn btn-success" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
-                            Tambah
+                            <i class="bi bi-plus-lg me-2"></i>Tambah
                         </button>
                     </div>
                     <div class="card my-3">
@@ -163,11 +163,11 @@
                                                         class="btn btn-warning">Edit</a> --}}
                                                     <button type="button" class="btn btn-warning mb-2" data-bs-toggle="modal"
                                                         data-bs-target="#editModal{{ $item->id }}">
-                                                        Edit
+                                                        <i class="bi bi-pencil-square"></i>
                                                     </button>
                                                     <a href="#" class="btn btn-danger delete-confirm"
                                                         data-id="{{ $item->id }}">
-                                                        Hapus
+                                                        <i class="bi bi-trash"></i>
                                                     </a>
                                                 </td>
                                             </tr>
