@@ -121,9 +121,7 @@ class ProjectController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    
     public function destroy($id)
     {
         project::find($id)->delete();
