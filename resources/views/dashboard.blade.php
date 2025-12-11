@@ -171,11 +171,14 @@
     <script src="{{ asset('assets2/js/sb-admin-2.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        Swal.fire({
-            title: "Login Berhasil!",
-            icon: "success",
-            draggable: true
-        });
+        @if(session('success'))
+            Swal.fire({
+                title: 'Berhasil!',
+                text: "{{ session('success') }}",
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+        @endif
     </script>
 
 </body>
