@@ -70,7 +70,12 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(project $project)
+    public function show($id)
+    {
+        $project = project::findOrFail($id);
+        return view('content.detail', compact('project'));
+    }
+    public function semua(project $project)
     {
         $project = project::all();
         return view('content.portofolio', compact('project'));

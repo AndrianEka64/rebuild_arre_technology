@@ -355,7 +355,7 @@
                     </div>
                 @endforeach
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <a href="index/portofolio" class="btn btn-primary mb-4">Lihat Semua Project</a>
+                    <a href="index/portofolio#daftar" class="btn btn-primary mb-4">Lihat Semua Project</a>
                 </div>
             </div>
         </div>

@@ -77,11 +77,10 @@
                     <a href="/index" class="nav-item nav-link text-dark">Beranda</a>
                     <a href="#tentang" class="nav-item nav-link text-dark">Tentang</a>
                     <a href="#layanan" class="nav-item nav-link text-dark">Layanan</a>
-                    <a href="#daftar" class="nav-item nav-link active">Portofolio</a>
+                    <a href="#portofolio" class="nav-item nav-link active">Portofolio</a>
                     <a href="#kontak" class="nav-item nav-link text-dark">Kontak</a>
                 </div>
-                <a href="/index/login"
-                    class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 shrink-0">LOGIN</a>
+                <a href="/index/login" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 shrink-0">LOGIN</a>
             </div>
         </nav>
 
@@ -168,44 +167,22 @@
     <!-- Navbar & Hero End -->
 
     <!--Content-->
-    <div id="tentang" class="container-fluid about py-5">
+    <div id="portofolio" class="container-fluid about py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="bg-primary rounded position-relative overflow-hidden">
-                        <img src="/assets/img/Projections-bro.svg" class="img-fluid rounded w-100" alt="">
+                        <img src="{{ asset('image/' . $project->image) }}" class="img-fluid rounded w-100" alt="">
                     </div>
                 </div>
                 <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
                     <div>
-                        <h4 class="text-primary">Portofolio</h4>
-                        <h1 class="display-5 mb-4">Project</h1>
-                        <p class="mb-4">Halaman Portofolio Project, pengguna akan melihat daftar seluruh project yang
-                            telah
-                            ditambahkan sebelumnya. Informasi ditampilkan dalam bentuk card yang rapi dan responsif,
-                            memudahkan pengguna untuk memantau project dengan jelas.
-                        </p>
+                        <h4 class="text-primary">Detail</h4>
+                        <h1 class="display-5 mb-4">{{ $project->nama_project }}</h1>
+                        <p class="mb-4">{{ $project->deskripsi_project }}</p>
                         <div class="row g-4">
-                            <div class="col-md-6 col-lg-6 col-xl-6">
-                                <div class="d-flex">
-                                    <div><i class="fas fa-map-marker-alt fa-3x text-primary"></i></div>
-                                    <div class="ms-4">
-                                        <h4>Datangi kami</h4>
-                                        <p>Jl.
-                                            Suryat No.83, Gedog,
-                                            Kec. Sananwetan, Kota Blitar,
-                                            Jawa Timur 66132</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-xl-6">
-                                <div class="d-flex">
-                                    <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
-                                    <div>
-                                        <h4>Hubungi Kami</h4>
-                                        <p class="mb-0 fs-5" style="letter-spacing: 1px;">0822-3131-6699</p>
-                                    </div>
-                                </div>
+                            <div class="col-sm-6">
+                                <a href="/index/portofolio#portofolio" class="btn btn-primary rounded-pill py-3 px-5 shrink-0">Kembali</a>
                             </div>
                         </div>
                     </div>
@@ -214,37 +191,6 @@
         </div>
     </div>
     <!--End detail-->
-    <hr>
-
-    <!-- Portofolio Start -->
-    <div id="daftar" class="container-fluid service pb-5">
-        <div class="container pb-5">
-            <div class="text-start mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s">
-                <h1 class="display-5 my-3 text-primary">Daftar Project</h1>
-                <h4>Berikut daftar project dari kami :</h4>
-            </div>
-            <div class="row g-5 text-start mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s">
-                @foreach ($project as $key => $item)
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="{{ asset('image/' . $item->image) }}" class="img-fluid rounded-top w-100"
-                                    alt="Image">
-                            </div>
-                            <div class="rounded-bottom p-4">
-                                <a href="/index/portofolio/detail/{{$item->id}}#portofolio" class="h4 d-inline-block mb-4">{{ $item->nama_project }}</a><br>
-                                <a href="/index/portofolio/detail/{{$item->id}}#portofolio" class="btn btn-primary" type="button">
-                                    Detail
-                                </a>
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-    <!-- Portofolio End -->
 
     <!-- brand -->
     <section id="clients" class="clients section-bg mb-5 mt-5">

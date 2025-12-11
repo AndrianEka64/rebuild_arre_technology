@@ -9,7 +9,8 @@ Route::get('/', function () {
 });
 
 Route::get('/index',[ProjectController::class,'lihat']);
-Route::get('/index/portofolio',[ProjectController::class,'show']);
+Route::get('/index/portofolio',[ProjectController::class,'semua']);
+Route::get('/index/portofolio/detail/{id}',[ProjectController::class,'show']);
 Route::get('/index/login',[AuthController::class,'showlogin'])->name('login');
 Route::post('/index/login/store',[AuthController::class,'login']);
 // Route::get('/index/register',[AuthController::class,'showregister']);
