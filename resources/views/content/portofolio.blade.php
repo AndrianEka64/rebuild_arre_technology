@@ -102,7 +102,7 @@
                                     <p class="mb-5 fs-5"><b>Arre Technology</b> Solutions For Your Websites
                                     </p>
                                     <div
-                                        class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
+                                        class="d-flex justify-content-center justify-content-md-end shrink-0 mb-4">
                                         <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2"
                                             href="#">Selengkapnya</a>
                                     </div>
@@ -139,7 +139,7 @@
                                         Blitar</h1>
                                     <p class="mb-5 fs-5"><b>Arre Technology</b> Solutions For Your Websites
                                     </p>
-                                    <div class="d-flex justify-content-center flex-shrink-0 mb-4">
+                                    <div class="d-flex justify-content-center shrink-0 mb-4">
                                         <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2"
                                             href="#">Selengkapnya</a>
                                     </div>
