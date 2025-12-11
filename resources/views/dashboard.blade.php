@@ -118,17 +118,28 @@
                     </nav>
                     <hr>
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Selamat Datang Di Dashboard</h1>
-
-                    <div class="card text-white bg-success mb-3">
-                        <div class="card-body text-start">
-                            <div class="row">
-                                <div class="col-2">
-                                    <h1><i class="bi bi-kanban me-3"></i></h1>
-                                </div>
-                                <div class="col-10">
-                                    <h2 class="card-title"><b>Total Jumlah Project</b></h2>
-                                    <h4 class="card-text">{{ $total }} Project</h4>
+                    
+                    <div class="row my-5">
+                        <div class="col-sm-3">
+                            <img src="/assets/img/Dashboard-bro.svg" class="img-fluid"  alt="">
+                        </div>
+                        <div class="col-sm-9">
+                            <h1 class="h3 mb-4 text-gray-800">Selamat Datang Di Dashboard!</h1>
+                            <p class="text-start">
+                                Semua statistik, progres project, dan informasi terbaru ditampilkan secara ringkas
+                                untuk memudahkan pengelolaan dan pemantauan.
+                            </p>
+                            <div class="card text-white bg-success mb-3">
+                                <div class="card-body text-start">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <h1><i class="bi bi-kanban me-3"></i></h1>
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <h2 class="card-title"><b>Total Jumlah Project</b></h2>
+                                            <h4 class="card-text">{{ $total }} Project</h4>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
