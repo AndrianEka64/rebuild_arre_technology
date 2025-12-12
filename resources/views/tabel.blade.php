@@ -161,10 +161,6 @@
                                                 <td><img src="{{ asset('image/' . $item->image) }}" alt=""
                                                     class="img-fluid img-thumbnail" style="max-width: 100px;"></td>
                                                 <td>
-                                                    {{-- <a href="{{ $item->link_project }}" target="_blank"
-                                                        class="btn btn-info">
-                                                        <i class="bi bi-globe2"></i>
-                                                    </a> --}}
                                                     <button type="button" class="btn btn-warning mb-2"
                                                         data-bs-toggle="modal" data-bs-target="#editModal{{ $item->id }}">
                                                         <i class="bi bi-pencil-square"></i>
