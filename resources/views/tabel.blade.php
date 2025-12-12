@@ -146,6 +146,7 @@
                                             <th scope="col">No.</th>
                                             <th scope="col">Nama Project</th>
                                             <th scope="col">Deskripsi Project</th>
+                                            <th scope="col">Link Project</th>
                                             <th scope="col">Gambar</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
@@ -155,14 +156,15 @@
                                             <tr>
                                                 <th scope="row">{{ $key + 1 }}</th>
                                                 <td>{{ $item->nama_project }}</td>
-                                                <td>{{  $item->deskripsi_project }}</td>
+                                                <td>{{  Str::limit($item->deskripsi_project,50) }}</td>
+                                                <td>{{  Str::limit($item->link_project,40) }}</td>
                                                 <td><img src="{{ asset('image/' . $item->image) }}" alt=""
-                                                        class="img-fluid img-thumbnail" style="max-width: 100px;"></td>
+                                                    class="img-fluid img-thumbnail" style="max-width: 100px;"></td>
                                                 <td>
-                                                    <a href="{{ $item->link_project }}" target="_blank"
-                                                        class="btn btn-info mb-2">
+                                                    {{-- <a href="{{ $item->link_project }}" target="_blank"
+                                                        class="btn btn-info">
                                                         <i class="bi bi-globe2"></i>
-                                                    </a>
+                                                    </a> --}}
                                                     <button type="button" class="btn btn-warning mb-2"
                                                         data-bs-toggle="modal" data-bs-target="#editModal{{ $item->id }}">
                                                         <i class="bi bi-pencil-square"></i>

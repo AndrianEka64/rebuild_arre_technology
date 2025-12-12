@@ -75,6 +75,10 @@
     background: var(--bs-dark);
     color: var(--bs-primary);
 }
+.btn.btn-warning:hover {
+    background: var(--bs-dark);
+    color: var(--bs-warning);
+}
 
 .btn.btn-light {
     color: var(--bs-primary);
