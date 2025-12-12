@@ -74,13 +74,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0 ">
-                    <a href="/index" class="nav-item nav-link text-dark">Beranda</a>
+                    <a href="/beranda" class="nav-item nav-link text-dark">Beranda</a>
                     <a href="#tentang" class="nav-item nav-link text-dark">Tentang</a>
                     <a href="#layanan" class="nav-item nav-link text-dark">Layanan</a>
                     <a href="#portofolio" class="nav-item nav-link active">Portofolio</a>
                     <a href="#kontak" class="nav-item nav-link text-dark">Kontak</a>
                 </div>
-                <a href="/index/login" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 shrink-0">LOGIN</a>
+                <a href="/login" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 shrink-0">LOGIN</a>
             </div>
         </nav>
 
@@ -100,8 +100,7 @@
                                         Blitar</h1>
                                     <p class="mb-5 fs-5"><b>Arre Technology</b> Solutions For Your Websites
                                     </p>
-                                    <div
-                                        class="d-flex justify-content-center justify-content-md-end shrink-0 mb-4">
+                                    <div class="d-flex justify-content-center justify-content-md-end shrink-0 mb-4">
                                         <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2"
                                             href="#">Selengkapnya</a>
                                     </div>
@@ -180,11 +179,9 @@
                         <h4 class="text-primary">Detail</h4>
                         <h1 class="display-5 mb-4">{{ $project->nama_project }}</h1>
                         <p class="mb-4">{{ $project->deskripsi_project }}</p>
-                        <div class="row g-4">
-                            <div class="col-sm-6">
-                                <a href="/index/portofolio#daftar" class="btn btn-primary rounded-pill py-3 px-5 shrink-0">Kembali</a>
-                            </div>
-                        </div>
+                        <a href="/portofolio#daftar"
+                            class="btn btn-primary rounded-pill py-3 px-5 me-2 shrink-0">Kembali</a>
+                        <a href="{{ $project->link_project }}" target="blank" class="btn btn-warning rounded-pill py-3 px-5 shrink-0">Preview</a>
                     </div>
                 </div>
             </div>

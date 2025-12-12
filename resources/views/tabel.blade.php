@@ -155,14 +155,16 @@
                                             <tr>
                                                 <th scope="row">{{ $key + 1 }}</th>
                                                 <td>{{ $item->nama_project }}</td>
-                                                <td>{{ $item->deskripsi_project }}</td>
+                                                <td>{{  $item->deskripsi_project }}</td>
                                                 <td><img src="{{ asset('image/' . $item->image) }}" alt=""
                                                         class="img-fluid img-thumbnail" style="max-width: 100px;"></td>
                                                 <td>
-                                                    {{-- <a href="/dashboard/edit/{{ $item->id }}" type="button"
-                                                        class="btn btn-warning">Edit</a> --}}
-                                                    <button type="button" class="btn btn-warning mb-2" data-bs-toggle="modal"
-                                                        data-bs-target="#editModal{{ $item->id }}">
+                                                    <a href="{{ $item->link_project }}" target="_blank"
+                                                        class="btn btn-info mb-2">
+                                                        <i class="bi bi-globe2"></i>
+                                                    </a>
+                                                    <button type="button" class="btn btn-warning mb-2"
+                                                        data-bs-toggle="modal" data-bs-target="#editModal{{ $item->id }}">
                                                         <i class="bi bi-pencil-square"></i>
                                                     </button>
                                                     <a href="#" class="btn btn-danger delete-confirm"

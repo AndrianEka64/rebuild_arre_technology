@@ -9,6 +9,7 @@
     <meta content="" name="description">
 
     <!-- Google Web Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -74,14 +75,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0 ">
-                    <a href="/index" class="nav-item nav-link text-dark">Beranda</a>
+                    <a href="/beranda" class="nav-item nav-link text-dark">Beranda</a>
                     <a href="#tentang" class="nav-item nav-link text-dark">Tentang</a>
                     <a href="#layanan" class="nav-item nav-link text-dark">Layanan</a>
                     <a href="#daftar" class="nav-item nav-link active">Portofolio</a>
                     <a href="#kontak" class="nav-item nav-link text-dark">Kontak</a>
                 </div>
-                <a href="/index/login"
-                    class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 shrink-0">LOGIN</a>
+                <a href="/login" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 shrink-0">LOGIN</a>
             </div>
         </nav>
 
@@ -101,8 +101,7 @@
                                         Blitar</h1>
                                     <p class="mb-5 fs-5"><b>Arre Technology</b> Solutions For Your Websites
                                     </p>
-                                    <div
-                                        class="d-flex justify-content-center justify-content-md-end shrink-0 mb-4">
+                                    <div class="d-flex justify-content-center justify-content-md-end shrink-0 mb-4">
                                         <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2"
                                             href="#">Selengkapnya</a>
                                     </div>
@@ -228,15 +227,17 @@
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-item">
                             <div class="service-img">
-                                <img src="{{ asset('image/' . $item->image) }}" class="img-fluid rounded-top w-100"
+                                <img src="{{ asset('image/' . $item->image) }}" class="img-fluid card-img-fixed w-100"
                                     alt="Image">
                             </div>
                             <div class="rounded-bottom p-4">
-                                <a href="/index/portofolio/detail/{{$item->id}}#portofolio" class="h4 d-inline-block mb-4">{{ $item->nama_project }}</a><br>
-                                <a href="/index/portofolio/detail/{{$item->id}}#portofolio" class="btn btn-primary" type="button">
-                                    Detail
-                                </a>
+                                <a href="/portofolio/detail/{{$item->id}}#portofolio"
+                                    class="h4 d-inline-block mb-4">{{ $item->nama_project }}</a><br>
+                                <p class="mb-4">{{ Str::limit($item->deskripsi_project, '50') }}</p>
                                 <hr>
+                                <a href="/portofolio/detail/{{$item->id}}#portofolio" class="btn btn-primary me-2"
+                                    type="button">Detail</a>
+                                <a href="{{ $item->link_project }}" target="_blank" class="btn btn-warning" type="button">Preview</a>
                             </div>
                         </div>
                     </div>
@@ -368,6 +369,7 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>

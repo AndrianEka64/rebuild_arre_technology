@@ -909,4 +909,10 @@
 }
 /*** copyright end ***/
 
-
+.card-img-fixed {
+        height: 220px;        /* bebas mau 200–300 px */
+        width: 100%;
+        object-fit: cover;    /* biar gambarnya ter-crop rapi */
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }

@@ -34,7 +34,6 @@
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
-                        <a class="btn btn-success rounded-circle mx-5 mt-4" href="/index"><i class="bi bi-backspace"></i></a>
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block">
@@ -43,40 +42,26 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Selamat Datang kembali!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Login Admin!</h1>
                                     </div>
-                                    <form method="POST" action="{{ url('/index/login/store') }}" class="user">
+                                    <form method="POST" action="{{ url('/login/store') }}" class="user">
                                         @csrf
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Masukkan Username..." name="name">
-                                        </div>
-                                        <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Masukkan Email..." name="email">
+                                            id="exampleInputEmail" aria-describedby="emailHelp"
+                                            placeholder="Masukkan Email..." name="email">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password" name="password">
                                         </div>
                                         @error('email')<div class="text-danger small">{{ $message }}</div>@enderror
-
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Ingat Saya</label>
-                                            </div>
-                                        </div>
                                         <button type="submit" class="btn btn-success btn-user btn-block">
                                             Login
                                         </button>
                                     </form>
                                     <hr>
-                                    <div class="text-center">
-                                        Belum punya akun? <a class="small" href="#">Buat Akun Baru!</a>
-                                    </div>
+                                    <a class="btn btn-primary rounded-pill btn-block" href="/beranda">kembali</a>
                                 </div>
                             </div>
                         </div>

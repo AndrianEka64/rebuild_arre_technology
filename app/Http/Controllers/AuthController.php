@@ -9,26 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    public function showregister()
-    {
-        return view('admin.register');
-    }
-    public function register(Request $request)
-    {
-        $request->validate([
-            'name'=>'required|min:3',
-            'email'=>'required|email|unique:users,email',
-            'password'=>'required|confirmed|min:6',
-        ]);
-        $user = User::create([
-            'name'=>$request->name,
-            'email'=>$request->email,
-            'password'=>Hash::make($request->password)
-        ]);
-        Auth::login($user);
-        return redirect('admin.login');
-    }
-    
     public function showlogin()
     {
         return view('admin.login');
@@ -54,6 +34,6 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/index/login');
+        return redirect('/login');
     }
 }

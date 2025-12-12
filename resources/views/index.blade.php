@@ -9,6 +9,8 @@
     <meta content="" name="description">
 
     <!-- Google Web Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -80,8 +82,7 @@
                     <a href="#portofolio" class="nav-item nav-link text-dark">Portofolio</a>
                     <a href="#kontak" class="nav-item nav-link text-dark">Kontak</a>
                 </div>
-                <a href="/index/login"
-                    class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 shrink-0">LOGIN</a>
+                <a href="/login" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 shrink-0">LOGIN</a>
             </div>
         </nav>
 
@@ -101,8 +102,7 @@
                                         Blitar</h1>
                                     <p class="mb-5 fs-5"><b>Arre Technology</b> Solutions For Your Websites
                                     </p>
-                                    <div
-                                        class="d-flex justify-content-center justify-content-md-end shrink-0 mb-4">
+                                    <div class="d-flex justify-content-center justify-content-md-end shrink-0 mb-4">
                                         <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2"
                                             href="#">Selengkapnya</a>
                                     </div>
@@ -205,8 +205,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <a href="#"
-                                    class="btn btn-primary rounded-pill py-3 px-5 shrink-0">Selengkapnya</a>
+                                <a href="#" class="btn btn-primary rounded-pill py-3 px-5 shrink-0">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
@@ -236,7 +235,8 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="assets/img/mvp.webp" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="assets/img/mvp.webp" class="img-fluid rounded-top w-100 card-img-fixed"
+                                alt="Image">
                         </div>
                         <div class="rounded-bottom p-4">
                             <a href="#" class="h4 d-inline-block mb-4">MVP Development</a>
@@ -253,7 +253,8 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="assets/img/web.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="assets/img/web.jpg" class="img-fluid rounded-top w-100 card-img-fixed"
+                                alt="Image">
                         </div>
                         <div class="rounded-bottom p-4">
                             <a href="#" class="h4 d-inline-block mb-4">Website Development</a>
@@ -267,7 +268,8 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="assets/img/mobile-app.webp" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="assets/img/mobile-app.webp" class="img-fluid rounded-top w-100 card-img-fixed"
+                                alt="Image">
                         </div>
                         <div class="rounded-bottom p-4">
                             <a href="#" class="h4 d-inline-block mb-4">Mobile App Development</a>
@@ -280,7 +282,8 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="assets/img/ui-ux.webp" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="assets/img/ui-ux.webp" class="img-fluid rounded-top w-100 card-img-fixed"
+                                alt="Image">
                         </div>
                         <div class="rounded-bottom p-4">
                             <a href="#" class="h4 d-inline-block mb-4">UI/UX Design</a>
@@ -300,7 +303,8 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="assets/img/csd2.png" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="assets/img/csd2.png" class="img-fluid rounded-top w-100 card-img-fixed"
+                                alt="Image">
                         </div>
                         <div class="rounded-bottom p-4">
                             <a href="#" class="h4 d-inline-block mb-4">Custom Software Development</a>
@@ -314,7 +318,8 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="assets/img/Wireframe.avif" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="assets/img/Wireframe.avif" class="img-fluid rounded-top w-100 card-img-fixed"
+                                alt="Image">
                         </div>
                         <div class="rounded-bottom p-4">
                             <a href="#" class="h4 d-inline-block mb-4">Specification Document & Wireframe</a>
@@ -335,27 +340,33 @@
         <div class="container pb-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-primary">Portofolio</h4>
-                <h1 class="display-5 mb-4">Project</h1> 
+                <h1 class="display-5 mb-4">Project</h1>
                 <p class="mb-0"> Kami telah membuat project dengan klien kami.
                 </p>
             </div>
-            <div class="row g-5 text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="row g-5 text-start mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s">
                 @foreach ($project as $key => $item)
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-item">
                             <div class="service-img">
-                                <img src="{{ asset('image/' . $item->image) }}" class="img-fluid rounded-top w-100"
+                                <img src="{{ asset('image/' . $item->image) }}" class="img-fluid w-100 card-img-fixed"
                                     alt="Image">
                             </div>
                             <div class="rounded-bottom p-4">
                                 <a href="#" class="h4 d-inline-block mb-4">{{ $item->nama_project }}</a><br>
-                               <hr>
+                                <p class="mb-4">{{ Str::limit($item->deskripsi_project, '50') }}</p>
+                                <hr>
+                                <a href="/portofolio/detail/{{$item->id}}#portofolio" class="btn btn-primary me-2"
+                                    type="button">Detail</a>
+                                <a href="{{ $item->link_project }}" target="_blank" class="btn btn-warning" type="button">Preview</a>
                             </div>
                         </div>
                     </div>
                 @endforeach
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <a href="index/portofolio#daftar" class="btn btn-primary mb-4">Lihat Semua Project</a>
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a href="portofolio#daftar" class="btn btn-primary mb-4">Lihat Semua Project</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -651,6 +662,9 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -38,6 +38,18 @@
             </div>
         </div>
     </div>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <label for="validationCustom01" class="form-label">Link Project</label>
+        </div>
+        <div class="col-md-9">
+            <input name="link" type="text" class="form-control" id="validationCustom01"
+                placeholder="Masukkan Link Project" required>
+            <div class="invalid-feedback">
+                Mohon isi link project
+            </div>
+        </div>
+    </div>
     <div class="modal-footer mt-3">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
         <button type="submit" class="btn btn-success">Simpan</button>

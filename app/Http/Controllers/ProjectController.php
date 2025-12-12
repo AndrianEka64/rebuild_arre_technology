@@ -48,7 +48,8 @@ class ProjectController extends Controller
             $request->validate([
                 'nama' => 'required',
                 'deskripsi' => 'required',
-                'image' => 'required|mimes:png,jpg,jpeg|max:2048'
+                'image' => 'required|mimes:png,jpg,jpeg|max:2048',
+                'link' => 'required',
             ]);
 
             $file = $request->file('image');
@@ -59,7 +60,8 @@ class ProjectController extends Controller
             project::create([
                 'nama_project' => $request->nama,
                 'deskripsi_project' => $request->deskripsi,
-                'image' => $namafile
+                'image' => $namafile,
+                'link_project'=>$request->link
             ]);
             return redirect('/dashboard/table')->with('success', 'Project berhasil ditambahkan!');
         } catch (\Exception $th) {
@@ -99,7 +101,8 @@ class ProjectController extends Controller
             $request->validate([
                 'nama' => 'required',
                 'deskripsi' => 'required',
-                'image' => 'required|mimes:png,jpg,jpeg|max:2048'
+                'image' => 'required|mimes:png,jpg,jpeg|max:2048',
+                'link' => 'required',
             ]);
             $data = project::find($id);
             if ($request->hasFile('image')) {
@@ -114,6 +117,7 @@ class ProjectController extends Controller
             }
             $data->nama_project = $request->nama;
             $data->deskripsi_project = $request->deskripsi;
+            $data->link_project = $request->link;
             $data->save();
             return redirect('/dashboard/table')->with('success', 'Project berhasil diupdate!');
         } catch (\Exception $th) {
