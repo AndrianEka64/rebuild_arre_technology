@@ -233,7 +233,7 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-item">
+                    <div class="service-item h-100">
                         <div class="service-img">
                             <img src="assets/img/mvp.webp" class="img-fluid rounded-top w-100 card-img-fixed"
                                 alt="Image">
@@ -251,7 +251,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-item">
+                    <div class="service-item h-100">
                         <div class="service-img">
                             <img src="assets/img/web.jpg" class="img-fluid rounded-top w-100 card-img-fixed"
                                 alt="Image">
@@ -266,7 +266,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-item">
+                    <div class="service-item h-100">
                         <div class="service-img">
                             <img src="assets/img/mobile-app.webp" class="img-fluid rounded-top w-100 card-img-fixed"
                                 alt="Image">
@@ -280,7 +280,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-item">
+                    <div class="service-item h-100">
                         <div class="service-img">
                             <img src="assets/img/ui-ux.webp" class="img-fluid rounded-top w-100 card-img-fixed"
                                 alt="Image">
@@ -301,7 +301,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-item">
+                    <div class="service-item h-100">
                         <div class="service-img">
                             <img src="assets/img/csd2.png" class="img-fluid rounded-top w-100 card-img-fixed"
                                 alt="Image">
@@ -316,7 +316,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-item">
+                    <div class="service-item h-100">
                         <div class="service-img">
                             <img src="assets/img/Wireframe.avif" class="img-fluid rounded-top w-100 card-img-fixed"
                                 alt="Image">
@@ -347,7 +347,7 @@
             <div class="row g-5 text-start mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s">
                 @foreach ($project as $key => $item)
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
+                        <div class="service-item h-100">
                             <div class="service-img">
                                 <img src="{{ asset('image/' . $item->image) }}" class="img-fluid w-100 card-img-fixed"
                                     alt="Image">
