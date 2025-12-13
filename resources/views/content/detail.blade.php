@@ -9,6 +9,7 @@
     <meta content="" name="description">
 
     <!-- Google Web Fonts -->
+    <link rel="shortcut icon" href="{{ asset('assets/img/icon.png') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
