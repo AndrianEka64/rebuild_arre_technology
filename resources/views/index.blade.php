@@ -354,7 +354,7 @@
                                     alt="Image">
                             </div>
                             <div class="rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-4">{{ $item->nama_project }}</a><br>
+                                <a href="/portofolio/detail/{{$item->id}}#portofolio" class="h4 d-inline-block mb-4">{{ $item->nama_project }}</a><br>
                                 <p class="mb-4">{{ Str::limit($item->deskripsi_project, '50') }}</p>
                                 <hr>
                                 <a href="/portofolio/detail/{{$item->id}}#portofolio" class="btn btn-primary me-2"

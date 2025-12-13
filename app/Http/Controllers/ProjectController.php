@@ -49,7 +49,7 @@ class ProjectController extends Controller
                 'nama' => 'required',
                 'deskripsi' => 'required',
                 'image' => 'required|mimes:png,jpg,jpeg|max:2048',
-                'link' => 'required',
+                'link' => 'required|url',
             ]);
 
             $file = $request->file('image');
@@ -102,7 +102,7 @@ class ProjectController extends Controller
                 'nama' => 'required',
                 'deskripsi' => 'required',
                 'image' => 'required|mimes:png,jpg,jpeg|max:2048',
-                'link' => 'required',
+                'link' => 'required|url',
             ]);
             $data = project::find($id);
             if ($request->hasFile('image')) {

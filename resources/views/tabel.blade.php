@@ -158,7 +158,7 @@
                                                 <th scope="row">{{ $key + 1 }}</th>
                                                 <td>{{ $item->nama_project }}</td>
                                                 <td>{{  Str::limit($item->deskripsi_project,50) }}</td>
-                                                <td>{{  Str::limit($item->link_project,40) }}</td>
+                                                <td><a href="{{ $item->link_project }}" target="_blank">{{  Str::limit($item->link_project,40) }}</a></td>
                                                 <td><img src="{{ asset('image/' . $item->image) }}" alt=""
                                                     class="img-fluid img-thumbnail" style="max-width: 100px;"></td>
                                                 <td>
