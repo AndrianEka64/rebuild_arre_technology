@@ -22,7 +22,7 @@ class ProjectController extends Controller
     {
         $project = project::limit(6)->get();
         // dd($project);
-        return view('index', compact('project'));
+        return view('welcome', compact('project'));
     }
 
     public function info()
@@ -48,20 +48,27 @@ class ProjectController extends Controller
             $request->validate([
                 'nama' => 'required',
                 'deskripsi' => 'required',
-                'image' => 'required|mimes:png,jpg,jpeg|max:2048',
+                'image' => 'required|array|min:1',
+                'image.*' => 'image|mimes:png,jpg,jpeg|max:2048',
                 'link' => 'required|url',
             ]);
-
-            $file = $request->file('image');
-            $extensi = $file->getClientOriginalExtension();
-            $namafile = time() . '.' . $extensi;
-            $file->move(public_path('image'), $namafile);
+            $images = [];
+            foreach ($request->file('image') as $index => $file) {
+                $extensi = $file->getClientOriginalExtension();
+                $namafile = time() . '_' . $index . '.' . $extensi;
+                $file->move(public_path('image'), $namafile);
+                $images[] = $namafile;
+            }
+            // $file = $request->file('image');
+            // $extensi = $file->getClientOriginalExtension();
+            // $namafile = time() . '.' . $extensi;
+            // $file->move(public_path('image'), $namafile);
 
             project::create([
                 'nama_project' => $request->nama,
                 'deskripsi_project' => $request->deskripsi,
-                'image' => $namafile,
-                'link_project'=>$request->link
+                'image' => json_encode($images),
+                'link_project' => $request->link
             ]);
             return redirect('/dashboard/table')->with('success', 'Project berhasil ditambahkan!');
         } catch (\Exception $th) {
@@ -101,23 +108,27 @@ class ProjectController extends Controller
             $request->validate([
                 'nama' => 'required',
                 'deskripsi' => 'required',
-                'image' => 'required|mimes:png,jpg,jpeg|max:2048',
+                'image' => 'nullable',
+                'image.*' => 'mimes:png,jpg,jpeg|max:2048',
                 'link' => 'required|url',
             ]);
             $data = project::find($id);
+            $imageold = $data->image ? json_decode($data->image, true) : [];
+            $images = $imageold;
             if ($request->hasFile('image')) {
-                if ($data->image && file_exists(public_path('image/' . $data->image))) {
-                    unlink(public_path('image/' . $data->image));
+                foreach ($request->file('image') as $index => $file) {
+                    if (isset($images[$index]) && file_exists(public_path('image/' . $images[$index]))) {
+                        unlink(public_path('image/' . $images[$index]));
+                    }
+                    $fileName = time() . '_' . $index . '.' . $file->getClientOriginalExtension();
+                    $file->move(public_path('image'), $fileName);
+                    $images[$index] = $fileName;
                 }
-                $file = $request->file('image');
-                $extensi = $file->getClientOriginalExtension();
-                $fileName = time() . '.' . $extensi;
-                $file->move(public_path('image'), $fileName);
-                $data->image = $fileName;
             }
             $data->nama_project = $request->nama;
             $data->deskripsi_project = $request->deskripsi;
             $data->link_project = $request->link;
+            $data->image = json_encode(array_values($images));
             $data->save();
             return redirect('/dashboard/table')->with('success', 'Project berhasil diupdate!');
         } catch (\Exception $th) {

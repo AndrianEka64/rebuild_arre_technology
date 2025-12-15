@@ -30,12 +30,17 @@
         </div>
         <div class="col-md-9">
             <div class="input-group has-validation">
-                <input name="image" type="file" class="form-control" id="validationCustomUsername"
-                    aria-describedby="inputGroupPrepend" required>
+                <input name="image[]" type="file" class="form-control" accept=".png,.jpg,.jpeg"
+                    id="validationCustomUsername" aria-describedby="inputGroupPrepend" multiple required>
+                @error('image')<div class="text-danger small mt-1">{{ $message }}</div> @enderror
+                @error('image.*')<div class="text-danger small mt-1">{{ $message }}</div> @enderror
                 <div class="invalid-feedback">
                     Mohon masukkan gambar
                 </div>
             </div>
+            <small class="text-muted">
+                Format png / jpg / jpeg, maksimal 2MB per gambar
+            </small>
         </div>
     </div>
     <div class="row mt-4">
@@ -55,3 +60,32 @@
         <button type="submit" class="btn btn-success">Simpan</button>
     </div>
 </form>
+<script>
+    document.getElementById('validationCustomUsername').addEventListener('change', function () {
+        const files = this.files;
+        const allowedTypes = ['image/png', 'image/jpeg', 'image/jpg'];
+        const maxSize = 2 * 1024 * 1024; // 2MB
+
+        for (let i = 0; i < files.length; i++) {
+            if (!allowedTypes.includes(files[i].type)) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Format gambar tidak valid.",
+                    text: "Hanya png, jpg, jpeg yang diperbolehkan.",
+                });
+                this.value = '';
+                return;
+            }
+
+            if (files[i].size > maxSize) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Ukuran gambar terlalu besar.",
+                    text: "Maksimal ukuran adalah 2 Mb",
+                });
+                this.value = '';
+                return;
+            }
+        }
+    });
+</script>

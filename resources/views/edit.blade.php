@@ -31,16 +31,28 @@
             <label for="validationCustomUsername" class="form-label">Upload Gambar Project</label>
         </div>
         <div class="col-md-9">
-            <img src="{{ asset('image/' . $item->image) }}" alt="Foto Project" class="img-thumbnail mb-2"
-                style="max-width: 200px;">
+            @php
+                $images = json_decode($item->image, true);
+            @endphp
+            @if (is_array($images))
+                <div class="d-flex gap-2 flex-wrap">
+                    @foreach ($images as $i => $img)
+                        <img src="{{ asset('image/' . $img) }}" alt="Gambar {{ $i + 1 }}" class="img-thumbnail"
+                            style="width: 80px; height: auto;">
+                    @endforeach
+                </div>
+            @endif
             <br>
             <div class="input-group has-validation">
-                <input name="image" type="file" class="form-control" id="validationCustomUsername"
-                    aria-describedby="inputGroupPrepend" value="{{ asset('image/' . $item->image) }}" required>
+                <input name="image[]" type="file" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" accept=".png,.jpg,.jpeg" multiple>
                 <div class="invalid-feedback">
                     Mohon masukkan gambar
                 </div>
             </div>
+            <small class="text-muted">
+                Kosongkan jika tidak ingin mengganti gambar
+            </small>
         </div>
     </div>
     <div class="row mt-4">
@@ -48,8 +60,8 @@
             <label for="validationCustom01" class="form-label">Link Project</label>
         </div>
         <div class="col-md-9">
-            <input name="link" type="text" class="form-control" value="{{ $item->link_project }}" id="validationCustom01"
-                placeholder="Masukkan Link Project" required>
+            <input name="link" type="text" class="form-control" value="{{ $item->link_project }}"
+                id="validationCustom01" placeholder="Masukkan Link Project" required>
             <div class="invalid-feedback">
                 Mohon isi link project
             </div>

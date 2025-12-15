@@ -52,13 +52,13 @@
         <div class="row gx-0 align-items-center">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-flex flex-wrap">
-                    <a href="#" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Jl.
+                    <a href="https://maps.app.goo.gl/zn1FuUMLmGJjffLt7" target="_blank" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Jl.
                         Suryat No.83, Gedog,
                         Kec. Sananwetan, Kota Blitar,
                         Jawa Timur 66132</a>
-                    <a href="tel:+01234567890" class="text-muted small me-4"><i
+                    <a href="https://wa.me/6282231316699" class="text-muted small me-4"><i
                             class="fas fa-phone-alt text-primary me-2"></i>0822-3131-6699</a>
-                    <a href="mailto:example@gmail.com" class="text-muted small me-0"><i
+                    <a href="#" class="text-muted small me-0"><i
                             class="fas fa-envelope text-primary me-2"></i>reza@dbn.net.id</a>
                 </div>
             </div>
@@ -77,13 +77,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0 ">
-                    <a href="/beranda" class="nav-item nav-link text-dark">Beranda</a>
+                    <a href="/" class="nav-item nav-link text-dark">Beranda</a>
                     <a href="#tentang" class="nav-item nav-link text-dark">Tentang</a>
                     <a href="#layanan" class="nav-item nav-link text-dark">Layanan</a>
                     <a href="#daftar" class="nav-item nav-link active">Portofolio</a>
                     <a href="#kontak" class="nav-item nav-link text-dark">Kontak</a>
                 </div>
-                <a href="/login" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 shrink-0">LOGIN</a>
             </div>
         </nav>
 
@@ -97,15 +96,16 @@
                             <div class="col-lg-0 col-xl-5"></div>
                             <div class="col-xl-7 animated fadeInLeft">
                                 <div class="text-sm-center text-md-end">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Selamat Datang di website kami
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Daftar Portofolio
                                     </h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">Jasa Pembuatan Website Di
-                                        Blitar</h1>
-                                    <p class="mb-5 fs-5"><b>Arre Technology</b> Solutions For Your Websites
+                                    <h1 class="display-4 text-uppercase text-white mb-4">kumpulan Daftar Portofolio Kami
+                                    </h1>
+                                    <p class="mb-5 fs-5">Anda dapat melihat <b>berbagai portofolio</b> yang telah
+                                        kami kerjakan.
                                     </p>
                                     <div class="d-flex justify-content-center justify-content-md-end shrink-0 mb-4">
                                         <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2"
-                                            href="#">Selengkapnya</a>
+                                            href="https://wa.me/6282231316699" target="_blank">Hubungi Kami</a>
                                     </div>
                                     <div
                                         class="d-flex align-items-center justify-content-center justify-content-md-end">
@@ -134,15 +134,16 @@
                         <div class="row g-5">
                             <div class="col-12 animated fadeInUp">
                                 <div class="text-center">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Selamat Datang di website kami
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Daftar Portofolio
                                     </h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">Jasa Pembuatan Website Di
-                                        Blitar</h1>
-                                    <p class="mb-5 fs-5"><b>Arre Technology</b> Solutions For Your Websites
+                                    <h1 class="display-4 text-uppercase text-white mb-4">Kumpulan Daftar Portofolio Kami
+                                    </h1>
+                                    <p class="mb-5 fs-5">Anda dapat melihat <b>berbagai portofolio</b> yang telah
+                                        kami kerjakan.
                                     </p>
                                     <div class="d-flex justify-content-center shrink-0 mb-4">
                                         <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2"
-                                            href="#">Selengkapnya</a>
+                                            href="https://wa.me/6282231316699" target="_blank">Hubungi Kami</a>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center">
                                         <h2 class="text-white me-2">Ikuti Kami:</h2>
@@ -168,7 +169,7 @@
     </div>
     <!-- Navbar & Hero End -->
 
-    <!--Content-->
+    <!--tentang-->
     <div id="tentang" class="container-fluid about py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
@@ -181,24 +182,19 @@
                     <div>
                         <h4 class="text-primary">Portofolio</h4>
                         <h1 class="display-5 mb-4">Project</h1>
-                        <p class="mb-4">Halaman Portofolio Project, pengguna akan melihat daftar seluruh project yang
-                            telah
-                            ditambahkan sebelumnya. Informasi ditampilkan dalam bentuk card yang rapi dan responsif,
-                            memudahkan pengguna untuk memantau project dengan jelas.
+                        <p class="mb-4">Halaman Portofolio Project menampilkan kumpulan karya dan project yang telah
+                            dikembangkan sebagai bentuk dokumentasi kemampuan, kreativitas, dan pengalaman dalam
+                            pengembangan website maupun aplikasi. Setiap project disajikan dalam bentuk card yang rapi
+                            dan responsif, dilengkapi dengan judul, deskripsi singkat, serta visual pendukung agar
+                            pengguna dapat memahami gambaran project dengan cepat dan jelas.
                         </p>
-                        <div class="row g-4">
-                            <div class="col-md-6 col-lg-6 col-xl-6">
-                                <div class="d-flex">
-                                    <div><i class="fas fa-map-marker-alt fa-3x text-primary"></i></div>
-                                    <div class="ms-4">
-                                        <h4>Datangi kami</h4>
-                                        <p>Jl.
-                                            Suryat No.83, Gedog,
-                                            Kec. Sananwetan, Kota Blitar,
-                                            Jawa Timur 66132</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <p class="mb-4">
+                            Melalui halaman ini, pengguna dapat menelusuri berbagai jenis project yang telah dikerjakan,
+                            mulai dari pengembangan website, aplikasi berbasis web, hingga perancangan tampilan
+                            antarmuka. Desain yang sederhana dan terstruktur membantu pengguna fokus pada isi project
+                            tanpa terganggu oleh tampilan yang berlebihan.
+                        </p>
+                        {{-- <div class="row g-4">
                             <div class="col-md-6 col-lg-6 col-xl-6">
                                 <div class="d-flex">
                                     <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
@@ -208,7 +204,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -218,11 +214,11 @@
     <hr>
 
     <!-- Portofolio Start -->
-    <div id="daftar" class="container-fluid service pb-5">
+    <div id="daftar" class="service pb-5">
         <div class="container pb-5">
             <div class="text-start mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s">
-                <h1 class="display-5 my-3 text-primary">Daftar Project</h1>
-                <h4>Berikut daftar project dari kami :</h4>
+                <h1 class="display-5 my-3 text-primary">Daftar Portofolio</h1>
+                <h4>Berikut daftar portofolio dari kami :</h4>
             </div>
             <div class="row g-5 text-start mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s">
                 @foreach ($project as $key => $item)
@@ -255,27 +251,102 @@
     </div>
     <!-- Portofolio End -->
 
+    <!-- kontak -->
+    <div id="kontak" class="container-fluid team pb-5">
+        <div class="container pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Kontak</h4>
+                <h1 class="display-5 mb-4">Kontak Kami!</h1>
+                <p class="mb-0">Bila anda ingin membuat sebuah website/aplikasi segera hubungi kami!
+                </p>
+            </div>
+            <div class="g-5 align-items-center">
+                <div class="row wow fadeInLeft bg-light" data-wow-delay="0.2s">
+                    <div class="col-xl-6">
+                        <div class="nav nav-pills rounded p-5">
+                            <div class="d-flex flex-column mb-3">
+                                <div class="p-2">
+                                    <div class="d-flex justify-content-start">
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://maps.app.goo.gl/zn1FuUMLmGJjffLt7" target="_blank"><i
+                                                class="bi bi-geo-alt-fill"></i></a>
+                                        <h4>Lokasi :</h4>
+                                    </div>
+                                    <p>Jl.Suryat No.83, Gedog,Kec. Sananwetan, Kota Blitar,Jawa Timur 66132</p>
+                                </div>
+                                <div class="p-2">
+                                    <div class="d-flex justify-content-start">
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://wa.me/6282231316699" target="_blank"><i
+                                                class="bi bi-telephone-fill"></i></a>
+                                        <h4>Telepon/WA :</h4>
+                                    </div>
+                                    <p>0822-3131-6699 </p>
+                                </div>
+                                <div class="p-2">
+                                    <div class="d-flex justify-content-start">
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                                class="bi bi-envelope-fill"></i></a>
+                                        <h4>Email :</h4>
+                                    </div>
+                                    <p>reza@dbn.net.id</p>
+                                </div>
+                                <div class="p-2">
+                                    <div class="d-flex justify-content-start">
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                                class="bi bi-browser-edge"></i></a>
+                                        <h4>Situs :</h4>
+                                    </div>
+                                    <p>arre-tech.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="rounded p-5">
+                            <div class="d-flex">
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                        class="bi bi-map"></i></i></a>
+                                <div>
+                                    <h4>Maps :</h4>
+                                </div>
+                            </div>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.005428388768!2d112.18391077443829!3d-8.100927281029264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ec7cedba4f57%3A0xb1e2fa66d11fe6a7!2sJl.%20Suryat%20No.89%2C%20Gedog%2C%20Kec.%20Sananwetan%2C%20Kota%20Blitar%2C%20Jawa%20Timur%2066171!5e0!3m2!1sid!2sid!4v1764817752774!5m2!1sid!2sid"
+                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- brand -->
-    <section id="clients" class="clients section-bg mb-5 mt-5">
+    <section id="clients" class="clients section-bg mb-5">
         <div class="container">
             <div class="row aos-init aos-animate" data-aos="zoom-in">
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/cyber.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="assets/img/2.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/client-2.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="assets/img/1.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/client-3.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="assets/img/6.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/client-4.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="assets/img/4.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/client-5.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="assets/img/8.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/client-6.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="assets/img/7.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="assets/img/3.png" class="img-fluid w-75" alt="">
+                </div>
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="assets/img/5.png" class="img-fluid w-75" alt="">
                 </div>
             </div>
         </div>

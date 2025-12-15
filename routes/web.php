@@ -4,11 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/beranda',[ProjectController::class,'lihat']);
+Route::get('/',[ProjectController::class,'lihat']);
 Route::get('/portofolio',[ProjectController::class,'semua']);
 Route::get('/portofolio/detail/{id}',[ProjectController::class,'show']);
 Route::get('/login',[AuthController::class,'showlogin'])->name('login');

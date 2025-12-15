@@ -57,7 +57,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/dashboard/table">
                     <i class="bi bi-table"></i>
-                    <span>Tabel</span>
+                    <span>Portofolio</span>
                 </a>
             </li>
 
@@ -125,20 +125,20 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Tabel Project</li>
+                            <li class="breadcrumb-item active" aria-current="page">Tabel Portofolio</li>
                         </ol>
                     </nav>
                     <hr>
                     <!-- Page Heading -->
                     <div class="d-flex mb-4">
-                        <h1 class="h3 me-auto text-gray-800">Tabel Data Project</h1>
+                        <h1 class="h3 me-auto text-gray-800">Tabel Data Portofolio</h1>
                         <button type="button" class="btn btn-success" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             <i class="bi bi-plus-lg me-2"></i>Tambah
                         </button>
                     </div>
                     <div class="card my-3">
-                        <div class="card-header bg-success text-white">Data Project</div>
+                        <div class="card-header bg-success text-white">Data Portofolio</div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table id="myTable" class="display">
@@ -157,10 +157,30 @@
                                             <tr>
                                                 <th scope="row">{{ $key + 1 }}</th>
                                                 <td>{{ $item->nama_project }}</td>
-                                                <td>{{  Str::limit($item->deskripsi_project,50) }}</td>
-                                                <td><a href="{{ $item->link_project }}" target="_blank">{{  Str::limit($item->link_project,40) }}</a></td>
-                                                <td><img src="{{ asset('image/' . $item->image) }}" alt=""
-                                                    class="img-fluid img-thumbnail" style="max-width: 100px;"></td>
+                                                <td>{{  Str::limit($item->deskripsi_project, 50) }}</td>
+                                                <td><a href="{{ $item->link_project }}"
+                                                        target="_blank">{{  Str::limit($item->link_project, 40) }}</a></td>
+                                                <td>
+                                                    @php
+                                                        $images = json_decode($item->image, true);
+                                                    @endphp
+                                                    @if(is_array($images))
+                                                        <div id="carouselExampleSlidesOnly{{ $item->id }}"
+                                                            class="carousel slide" data-bs-ride="carousel">
+                                                            <div class="carousel-inner">
+                                                                @foreach ($images as $index => $img)
+                                                                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                                                        <img src="{{ asset('image/' . $img) }}"
+                                                                            class="d-block mx-auto"
+                                                                            style="max-width:150px; height:100px; object-fit:cover;"
+                                                                            alt="Gambar Project">
+
+                                                                    </div>
+                                                                @endforeach
+                                                            </div>
+                                                        </div>
+                                                    @endif
+                                                </td>
                                                 <td>
                                                     <button type="button" class="btn btn-warning mb-2"
                                                         data-bs-toggle="modal" data-bs-target="#editModal{{ $item->id }}">
