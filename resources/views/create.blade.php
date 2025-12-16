@@ -71,7 +71,7 @@
                 Swal.fire({
                     icon: "error",
                     title: "Format gambar tidak valid.",
-                    text: "Hanya png, jpg, jpeg yang diperbolehkan.",
+                    text: "Format hanya png, jpg, jpeg.",
                 });
                 this.value = '';
                 return;
@@ -81,7 +81,7 @@
                 Swal.fire({
                     icon: "error",
                     title: "Ukuran gambar terlalu besar.",
-                    text: "Maksimal ukuran adalah 2 Mb",
+                    text: "Maksimal ukuran 2 Mb",
                 });
                 this.value = '';
                 return;

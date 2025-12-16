@@ -76,35 +76,35 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0 ">
-                    <a href="/beranda" class="nav-item nav-link text-dark">Beranda</a>
+                    <a href="/" class="nav-item nav-link text-dark">Beranda</a>
                     <a href="#tentang" class="nav-item nav-link text-dark">Tentang</a>
                     <a href="#layanan" class="nav-item nav-link text-dark">Layanan</a>
                     <a href="#portofolio" class="nav-item nav-link active">Portofolio</a>
                     <a href="#kontak" class="nav-item nav-link text-dark">Kontak</a>
                 </div>
-                <a href="/login" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 shrink-0">LOGIN</a>
             </div>
         </nav>
 
         <!-- Carousel Start -->
         <div id="beranda" class="header-carousel owl-carousel">
             <div class="header-carousel-item">
-                <img src="/assets/img/bg1.jpg" class="img-fluid w-100" alt="Image">
+                <img src="{{ asset('image/' . json_decode($project->image, true)[0]) }}" class="img-fluid w-100"
+                    alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row gy-0 gx-5">
                             <div class="col-lg-0 col-xl-5"></div>
                             <div class="col-xl-7 animated fadeInLeft">
                                 <div class="text-sm-center text-md-end">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Selamat Datang di website kami
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Halaman Detail
                                     </h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">Jasa Pembuatan Website Di
-                                        Blitar</h1>
-                                    <p class="mb-5 fs-5"><b>Arre Technology</b> Solutions For Your Websites
+                                    <h1 class="display-4 text-uppercase text-white mb-4">{{ $project->nama_project }}
+                                    </h1>
+                                    <p class="mb-5 fs-5 ">By :<b> Arre Technology</b>
                                     </p>
                                     <div class="d-flex justify-content-center justify-content-md-end shrink-0 mb-4">
                                         <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2"
-                                            href="#">Selengkapnya</a>
+                                            href="https://wa.me/6282231316699" target="_blank">Hubungi Kami</a>
                                     </div>
                                     <div
                                         class="d-flex align-items-center justify-content-center justify-content-md-end">
@@ -127,21 +127,22 @@
                 </div>
             </div>
             <div class="header-carousel-item">
-                <img src="/assets/img/bg2.jpg" class="img-fluid w-100" alt="Image">
+                <img src="{{ asset('image/' . json_decode($project->image, true)[1]) }}" class="img-fluid w-100"
+                    alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row g-5">
                             <div class="col-12 animated fadeInUp">
                                 <div class="text-center">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Selamat Datang di website kami
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Halaman Detail
                                     </h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">Jasa Pembuatan Website Di
-                                        Blitar</h1>
-                                    <p class="mb-5 fs-5"><b>Arre Technology</b> Solutions For Your Websites
+                                    <h1 class="display-4 text-uppercase text-white mb-4">{{ $project->nama_project }}
+                                    </h1>
+                                    <p class="mb-5 fs-5 ">By :<b> Arre Technology</b>
                                     </p>
                                     <div class="d-flex justify-content-center shrink-0 mb-4">
                                         <a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2"
-                                            href="#">Selengkapnya</a>
+                                            href="https://wa.me/6282231316699" target="_blank">Hubungi Kami</a>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center">
                                         <h2 class="text-white me-2">Ikuti Kami:</h2>
@@ -173,45 +174,77 @@
             <div class="row g-5 align-items-center">
                 <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="bg-primary rounded position-relative overflow-hidden">
-                        <img src="{{ asset('image/' . $project->image) }}" class="img-fluid rounded w-100" alt="">
+                        {{-- batas carousel --}}
+                        @php
+                            $images = json_decode($project->image, true);
+                        @endphp
+                        @if (is_array($images))
+                            <div id="carouselExampleRide{{ $project->id }}" class="carousel slide" data-bs-ride="true">
+                                <div class="carousel-inner">
+                                    @foreach ($images as $index => $img)
+                                        <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                            <img src="{{ asset('image/' . $img) }}" class="img-fluid rounded w-100"alt="Gambar {{ $index + 1 }}">
+                                        </div>
+                                    @endforeach
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleRide{{ $project->id }}" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleRide{{ $project->id }}" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        @endif
+                        {{-- batas carousel --}}
                     </div>
                 </div>
                 <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
                     <div>
                         <h4 class="text-primary">Detail</h4>
                         <h1 class="display-5 mb-4">{{ $project->nama_project }}</h1>
-                        <p class="mb-4">{{ $project->deskripsi_project }}</p>
                         <a href="/portofolio#daftar"
                             class="btn btn-primary rounded-pill py-3 px-5 me-2 shrink-0">Kembali</a>
-                        <a href="{{ $project->link_project }}" target="blank" class="btn btn-warning rounded-pill py-3 px-5 shrink-0">Preview</a>
+                        <a href="{{ $project->link_project }}" target="blank"
+                            class="btn btn-warning rounded-pill py-3 px-5 shrink-0">Preview</a>
                     </div>
                 </div>
+                <p class="mb-4" style="text-align: justify;">{{ $project->deskripsi_project }}</p>
             </div>
         </div>
     </div>
     <!--End detail-->
 
     <!-- brand -->
-    <section id="clients" class="clients section-bg mb-5 mt-5">
+    <section id="clients" class="clients section-bg mb-5">
         <div class="container">
             <div class="row aos-init aos-animate" data-aos="zoom-in">
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/cyber.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="/assets/img/2.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/client-2.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="/assets/img/1.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/client-3.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="/assets/img/6.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/client-4.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="/assets/img/4.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/client-5.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="/assets/img/8.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="/assets/img/client-6.png" class="img-fluid" alt="">
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="/assets/img/7.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="/assets/img/3.png" class="img-fluid w-75" alt="">
+                </div>
+                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                    <img src="/assets/img/5.png" class="img-fluid w-75" alt="">
                 </div>
             </div>
         </div>

@@ -52,7 +52,8 @@
         <div class="row gx-0 align-items-center">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-flex flex-wrap">
-                    <a href="https://maps.app.goo.gl/zn1FuUMLmGJjffLt7" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Jl.
+                    <a href="https://maps.app.goo.gl/zn1FuUMLmGJjffLt7" class="text-muted small me-4"><i
+                            class="fas fa-map-marker-alt text-primary me-2"></i>Jl.
                         Suryat No.83, Gedog,
                         Kec. Sananwetan, Kota Blitar,
                         Jawa Timur 66132</a>
@@ -346,8 +347,8 @@
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-item h-100">
                             <div class="service-img">
-                                <img src="{{ asset('image/' . json_decode($item->image, true)[0])  }}" class="img-fluid w-100 card-img-fixed"
-                                    alt="Image">
+                                <img src="{{ asset('image/' . json_decode($item->image, true)[0])  }}"
+                                    class="img-fluid w-100 card-img-fixed" alt="Image">
                             </div>
                             <div class="rounded-bottom p-4">
                                 <a href="/portofolio/detail/{{$item->id}}#portofolio"
@@ -478,14 +479,15 @@
                 <p class="mb-0">Bila anda ingin membuat sebuah website/aplikasi segera hubungi kami!
                 </p>
             </div>
-            <div class="g-5 align-items-center">
+            <div class="g-3 align-items-center">
                 <div class="row wow fadeInLeft bg-light" data-wow-delay="0.2s">
                     <div class="col-xl-6">
-                        <div class="nav nav-pills rounded p-5">
+                        <div class="nav nav-pills rounded p-3 bg-light">
                             <div class="d-flex flex-column mb-3">
                                 <div class="p-2">
                                     <div class="d-flex justify-content-start">
-                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://maps.app.goo.gl/zn1FuUMLmGJjffLt7" target="_blank"><i
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3"
+                                            href="https://maps.app.goo.gl/zn1FuUMLmGJjffLt7" target="_blank"><i
                                                 class="bi bi-geo-alt-fill"></i></a>
                                         <h4>Lokasi :</h4>
                                     </div>
@@ -493,7 +495,8 @@
                                 </div>
                                 <div class="p-2">
                                     <div class="d-flex justify-content-start">
-                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://wa.me/6282231316699" target="_blank"><i
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3"
+                                            href="https://wa.me/6282231316699" target="_blank"><i
                                                 class="bi bi-telephone-fill"></i></a>
                                         <h4>Telepon/WA :</h4>
                                     </div>
@@ -519,18 +522,20 @@
                         </div>
                     </div>
                     <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="rounded p-5">
-                            <div class="d-flex">
+                        <div class="rounded p-3">
+                            <div class="d-flex m-2">
                                 <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
                                         class="bi bi-map"></i></i></a>
                                 <div>
                                     <h4>Maps :</h4>
                                 </div>
                             </div>
-                            <iframe
+                            <div class="ratio ratio-4x3">
+                                <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.005428388768!2d112.18391077443829!3d-8.100927281029264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ec7cedba4f57%3A0xb1e2fa66d11fe6a7!2sJl.%20Suryat%20No.89%2C%20Gedog%2C%20Kec.%20Sananwetan%2C%20Kota%20Blitar%2C%20Jawa%20Timur%2066171!5e0!3m2!1sid!2sid!4v1764817752774!5m2!1sid!2sid"
-                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                                style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>

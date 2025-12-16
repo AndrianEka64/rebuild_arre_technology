@@ -225,7 +225,7 @@
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-item">
                             <div class="service-img">
-                                <img src="{{ asset('image/' . $item->image) }}" class="img-fluid card-img-fixed w-100"
+                                <img src="{{ asset('image/' .json_decode($item->image, true)[0]) }}" class="img-fluid card-img-fixed w-100"
                                     alt="Image">
                             </div>
                             <div class="rounded-bottom p-4">

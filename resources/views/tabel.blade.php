@@ -171,10 +171,7 @@
                                                                 @foreach ($images as $index => $img)
                                                                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                                                                         <img src="{{ asset('image/' . $img) }}"
-                                                                            class="d-block mx-auto"
-                                                                            style="max-width:150px; height:100px; object-fit:cover;"
-                                                                            alt="Gambar Project">
-
+                                                                            class="img-fluid rounded w-100" alt="Gambar {{ $index + 1 }}">
                                                                     </div>
                                                                 @endforeach
                                                             </div>
