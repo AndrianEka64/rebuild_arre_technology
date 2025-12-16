@@ -549,22 +549,22 @@
         <div class="container">
             <div class="row aos-init aos-animate" data-aos="zoom-in">
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/2.png" class="img-fluid" alt="">
+                    <img src="assets/img/2.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/1.png" class="img-fluid" alt="">
+                    <img src="assets/img/1.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/6.png" class="img-fluid" alt="">
+                    <img src="assets/img/6.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/4.png" class="img-fluid" alt="">
+                    <img src="assets/img/4.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/8.png" class="img-fluid" alt="">
+                    <img src="assets/img/8.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/7.png" class="img-fluid" alt="">
+                    <img src="assets/img/7.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
                     <img src="assets/img/3.png" class="img-fluid w-75" alt="">

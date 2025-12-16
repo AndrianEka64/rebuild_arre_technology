@@ -7,6 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- Google Web Fonts -->
     <link rel="shortcut icon" href="{{ asset('assets/img/icon.png') }}" type="image/x-icon">
@@ -88,8 +90,13 @@
         <!-- Carousel Start -->
         <div id="beranda" class="header-carousel owl-carousel">
             <div class="header-carousel-item">
-                <img src="{{ asset('image/' . json_decode($project->image, true)[0]) }}" class="img-fluid w-100"
-                    alt="Image">
+                @if(isset(json_decode($project->image, true)[0]))
+                    <div class="header-carousel-item">
+                        <img src="{{ asset('image/' . json_decode($project->image, true)[0]) }}" class="img-fluid w-100"
+                            alt="Image">
+                        ...
+                    </div>
+                @endif
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row gy-0 gx-5">
@@ -127,8 +134,13 @@
                 </div>
             </div>
             <div class="header-carousel-item">
-                <img src="{{ asset('image/' . json_decode($project->image, true)[1]) }}" class="img-fluid w-100"
-                    alt="Image">
+                @if(isset(json_decode($project->image, true)[1]))
+                    <div class="header-carousel-item">
+                        <img src="{{ asset('image/' . json_decode($project->image, true)[1]) }}" class="img-fluid w-100"
+                            alt="Image">
+                        ...
+                    </div>
+                @endif
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row g-5">
@@ -183,7 +195,8 @@
                                 <div class="carousel-inner">
                                     @foreach ($images as $index => $img)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                                            <img src="{{ asset('image/' . $img) }}" class="img-fluid rounded w-100"alt="Gambar {{ $index + 1 }}">
+                                            <img src="{{ asset('image/' . $img) }}" class="img-fluid rounded w-100"
+                                                alt="Gambar {{ $index + 1 }}">
                                         </div>
                                     @endforeach
                                 </div>
@@ -213,6 +226,7 @@
                     </div>
                 </div>
                 <p class="mb-4" style="text-align: justify;">{{ $project->deskripsi_project }}</p>
+                <hr>
             </div>
         </div>
     </div>
@@ -223,22 +237,22 @@
         <div class="container">
             <div class="row aos-init aos-animate" data-aos="zoom-in">
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/2.png" class="img-fluid" alt="">
+                    <img src="/assets/img/2.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/1.png" class="img-fluid" alt="">
+                    <img src="/assets/img/1.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/6.png" class="img-fluid" alt="">
+                    <img src="/assets/img/6.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/4.png" class="img-fluid" alt="">
+                    <img src="/assets/img/4.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/8.png" class="img-fluid" alt="">
+                    <img src="/assets/img/8.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/7.png" class="img-fluid" alt="">
+                    <img src="/assets/img/7.png" class="img-fluid w-75" alt="">
                 </div>
                 <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
                     <img src="/assets/img/3.png" class="img-fluid w-75" alt="">
@@ -336,6 +350,9 @@
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
     <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>
