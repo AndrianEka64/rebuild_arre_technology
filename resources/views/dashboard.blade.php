@@ -127,7 +127,7 @@
                         <div class="col-sm-9">
                             <h1 class="h3 mb-4 text-gray-800">Selamat Datang Di Dashboard!</h1>
                             <p class="text-start">
-                                Semua statistik, progres project, dan informasi terbaru ditampilkan secara ringkas
+                                Semua statistik, progres Portofolio, dan informasi terbaru ditampilkan secara ringkas
                                 untuk memudahkan pengelolaan dan pemantauan.
                             </p>
                             <div class="card text-white bg-success mb-3">
@@ -137,8 +137,8 @@
                                             <h1><i class="bi bi-kanban me-3"></i></h1>
                                         </div>
                                         <div class="col-sm-10">
-                                            <h2 class="card-title"><b>Total Jumlah Project</b></h2>
-                                            <h4 class="card-text">{{ $total }} Project</h4>
+                                            <h2 class="card-title"><b>Total Jumlah Portofolio</b></h2>
+                                            <h4 class="card-text">{{ $total }} Portofolio</h4>
                                         </div>
                                     </div>
                                 </div>
