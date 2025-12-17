@@ -73,7 +73,7 @@
 
 .btn.btn-primary:hover {
     background: var(--bs-dark);
-    color: var(--bs-primary);
+    color: var(--bs-white);
 }
 .btn.btn-warning:hover {
     background: var(--bs-dark);
@@ -920,3 +920,87 @@
         border-top-left-radius: .5rem;
         border-top-right-radius: .5rem;
     }
+
+:root {
+    --bs-primary: #1167b1; /* Biru Bootstrap */
+}
+
+.text-primary {
+    color: #1167b1 !important;
+}
+
+.bg-primary {
+    background-color: #1167b1 !important;
+}
+
+.btn-primary {
+    background-color: #1167b1;
+    border-color: #1167b1;
+}
+
+/* HOVER */
+.btn-primary:hover {
+    background-color: #000000 !important;
+    border-color: #1167b1 !important;
+    color: #1167b1 !important;
+}
+
+/* ACTIVE / CLICK */
+.btn-primary:active,
+.btn-primary.active,
+.btn-check:checked + .btn-primary {
+    background-color: #1167b1 !important;
+    border-color: #1167b1 !important;
+    color: #fff !important;
+}
+
+/* FOCUS */
+.btn-primary:focus,
+.btn-primary:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.35) !important;
+}
+
+
+[class*="btn-primary"] {
+    background-color: #1167b1 !important;
+    border-color: #1167b1 !important;
+}
+
+/* Hover, focus, active → tetap biru */
+.service-item .rounded-bottom a.h4:hover,
+.service-item .rounded-bottom a.h4:focus,
+.service-item .rounded-bottom a.h4:active {
+    color: var(--bs-primary) !important;
+}
+
+.btn-outline-primary {
+    border-color: #1167b1;
+    color: #1167b1;
+}
+
+/* HOVER */
+.btn-outline-primary:hover {
+    background-color: #1167b1 !important;
+    border-color: #1167b1 !important;
+    color: #ffffff !important;
+}
+
+/* ACTIVE / CLICK */
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-check:checked + .btn-outline-primary {
+    background-color: #1167b1 !important;
+    border-color: #1167b1 !important;
+    color: #ffffff !important;
+}
+
+/* FOCUS */
+.btn-outline-primary:focus,
+.btn-outline-primary:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.35) !important;
+}
+
+
+[class*="btn-outline-primary"] {
+    border-color: #1167b1 !important;
+}

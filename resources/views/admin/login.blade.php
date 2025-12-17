@@ -20,11 +20,12 @@
 
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="{{ asset('assets2/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
 </head>
 
-<body class="bg-gradient-success">
+<body style="background-color: #03254c">
 
     <div class="container min-vh-100 d-flex align-items-center justify-content-center">
 
@@ -49,20 +50,20 @@
                                         @csrf
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
-                                            id="exampleInputEmail" aria-describedby="emailHelp"
-                                            placeholder="Masukkan Email..." name="email">
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Masukkan Email..." name="email">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password" name="password">
                                         </div>
                                         @error('email')<div class="text-danger small">{{ $message }}</div>@enderror
-                                        <button type="submit" class="btn btn-success btn-user btn-block">
+                                        <button type="submit" class="btn btn-user btn-block" style="background-color: #187bcd; color: white;">
                                             Login
                                         </button>
                                     </form>
                                     <hr>
-                                    <a class="btn btn-primary rounded-pill btn-block" href="/beranda">kembali</a>
+                                    <a class="btn btn-danger rounded-pill btn-block" href="/">kembali</a>
                                 </div>
                             </div>
                         </div>
@@ -84,6 +85,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('assets2/js/sb-admin-2.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 

@@ -48,7 +48,7 @@
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
-    <div class="container-fluid topbar bg-light px-5 py-2 d-none d-lg-block">
+    {{-- <div class="container-fluid topbar bg-light px-5 py-2 d-none d-lg-block">
         <div class="row gx-0 align-items-center">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-flex flex-wrap">
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Topbar End -->
 
     <!-- Navbar & Hero Start -->
@@ -355,23 +355,82 @@
                                     class="h4 d-inline-block mb-4">{{ $item->nama_project }}</a><br>
                                 <p class="mb-4">{{ Str::limit($item->deskripsi_project, '50') }}</p>
                                 <hr>
-                                <a href="/portofolio/detail/{{$item->id}}#portofolio" class="btn btn-primary me-2"
+                                <a href="/portofolio/detail/{{$item->id}}#portofolio" class="btn btn-outline-primary me-2"
                                     type="button">Detail</a>
-                                <a href="{{ $item->link_project }}" target="_blank" class="btn btn-warning"
-                                    type="button">Preview</a>
+                                <a href="{{ $item->link_project }}" target="_blank" class="btn btn-outline-warning"
+                                    type="button">Preview></a>
                             </div>
                         </div>
                     </div>
                 @endforeach
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <a href="portofolio#daftar" class="btn btn-primary mb-4">Lihat Semua Project</a>
+                        <a href="portofolio#daftar" class="btn btn-primary mb-4">Lihat Semua Project </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Portofolio End -->
+
+    <!-- brand -->
+    <section id="clients" class="clients section-bg pb-5">
+        <div class=" pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Clients</h4>
+                <h1 class="display-5 mb-4">Clients Kami</h1>
+                <p class="mb-0"> Kami telah bekerjasama dengan beberapa klien terbaik.
+                </p>
+            </div>
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row aos-init aos-animate" data-aos="zoom-in">
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="assets/img/2.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="assets/img/1.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="assets/img/6.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="assets/img/4.png" class="img-fluid w-75" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row aos-init aos-animate" data-aos="zoom-in">
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="assets/img/8.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="assets/img/7.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="assets/img/3.png" class="img-fluid w-50" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="assets/img/5.png" class="img-fluid w-50" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- end-brand -->
 
     <!-- FAQs Start -->
     <div class="container-fluid faq-section pb-5">
@@ -532,9 +591,9 @@
                             </div>
                             <div class="ratio ratio-4x3">
                                 <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.005428388768!2d112.18391077443829!3d-8.100927281029264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ec7cedba4f57%3A0xb1e2fa66d11fe6a7!2sJl.%20Suryat%20No.89%2C%20Gedog%2C%20Kec.%20Sananwetan%2C%20Kota%20Blitar%2C%20Jawa%20Timur%2066171!5e0!3m2!1sid!2sid!4v1764817752774!5m2!1sid!2sid"
-                                style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.005428388768!2d112.18391077443829!3d-8.100927281029264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ec7cedba4f57%3A0xb1e2fa66d11fe6a7!2sJl.%20Suryat%20No.89%2C%20Gedog%2C%20Kec.%20Sananwetan%2C%20Kota%20Blitar%2C%20Jawa%20Timur%2066171!5e0!3m2!1sid!2sid!4v1764817752774!5m2!1sid!2sid"
+                                    style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -544,41 +603,9 @@
     </div>
     <!-- Kontak berakhir -->
 
-    <!-- brand -->
-    <section id="clients" class="clients section-bg mb-5">
-        <div class="container">
-            <div class="row aos-init aos-animate" data-aos="zoom-in">
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/2.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/1.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/6.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/4.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/8.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/7.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/3.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/5.png" class="img-fluid w-75" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end-brand -->
 
     <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container-fluid footer py-5 wow fadeIn"  style="background-color: #03254c" data-wow-delay="0.2s">
         <div class="container py-5 border-start-0 border-end-0"
             style="border: 1px solid; border-color: rgb(255, 255, 255);">
             <div class="row g-5">

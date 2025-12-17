@@ -33,7 +33,8 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion mt-5 pt-5" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion mt-5 pt-5" id="accordionSidebar"
+            style="background-color: #03254c">
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -97,7 +98,7 @@
                                 <input type="text" class="form-control bg-light border-0 small"
                                     placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
-                                    <button class="btn btn-success" type="button">
+                                    <button class="btn" style="background-color: #03254c; color: white;" type="button">
                                         <i class="fas fa-search fa-sm"></i>
                                     </button>
                                 </div>
@@ -132,17 +133,17 @@
                     <!-- Page Heading -->
                     <div class="d-flex mb-4">
                         <h1 class="h3 me-auto text-gray-800">Tabel Data Portofolio</h1>
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                        <button type="button" class="btn" style="background-color: #03254c; color: white;"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="bi bi-plus-lg me-2"></i>Tambah
                         </button>
                     </div>
                     <div class="card my-3">
-                        <div class="card-header bg-success text-white">Data Portofolio</div>
+                        <div class="card-header" style="background-color: #03254c; color: white;">Data Portofolio</div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table id="myTable" class="display">
-                                    <thead class="table-success">
+                                    <thead class="table-primary">
                                         <tr>
                                             <th scope="col">No.</th>
                                             <th scope="col">Nama Project</th>
@@ -171,7 +172,8 @@
                                                                 @foreach ($images as $index => $img)
                                                                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                                                                         <img src="{{ asset('image/' . $img) }}"
-                                                                            class="img-fluid rounded w-100" alt="Gambar {{ $index + 1 }}">
+                                                                            class="img-fluid rounded w-100"
+                                                                            alt="Gambar {{ $index + 1 }}">
                                                                     </div>
                                                                 @endforeach
                                                             </div>
@@ -349,6 +351,47 @@
                 confirmButtonText: 'OK'
             });
         @endif
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.addEventListener('change', function (e) {
+                if (e.target.matches('input[type="file"][name="image[]"]')) {
+
+                    const input = e.target;
+                    const allowedTypes = ['image/png', 'image/jpeg', 'image/jpg'];
+                    const maxSize = 2 * 1024 * 1024; // 2MB
+
+                    for (let file of input.files) {
+
+                        if (!allowedTypes.includes(file.type)) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Format tidak valid',
+                                text: 'Hanya png, jpg, jpeg',
+                            });
+
+                            input.value = '';
+                            input.classList.add('is-invalid');
+                            return;
+                        }
+
+                        if (file.size > maxSize) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Ukuran terlalu besar',
+                                text: 'Maksimal 2 MB',
+                            });
+
+                            input.value = '';
+                            input.classList.add('is-invalid');
+                            return;
+                        }
+                    }
+
+                    input.classList.remove('is-invalid');
+                }
+            });
+        });
     </script>
 </body>
 

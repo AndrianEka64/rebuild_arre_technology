@@ -49,7 +49,7 @@
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
-    <div class="container-fluid topbar bg-light px-5 py-2 d-none d-lg-block">
+    {{-- <div class="container-fluid topbar bg-light px-5 py-2 d-none d-lg-block">
         <div class="row gx-0 align-items-center">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-flex flex-wrap">
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Topbar End -->
 
     <!-- Navbar & Hero Start -->
@@ -94,7 +94,6 @@
                     <div class="header-carousel-item">
                         <img src="{{ asset('image/' . json_decode($project->image, true)[0]) }}" class="img-fluid w-100"
                             alt="Image">
-                        ...
                     </div>
                 @endif
                 <div class="carousel-caption">
@@ -138,7 +137,6 @@
                     <div class="header-carousel-item">
                         <img src="{{ asset('image/' . json_decode($project->image, true)[1]) }}" class="img-fluid w-100"
                             alt="Image">
-                        ...
                     </div>
                 @endif
                 <div class="carousel-caption">
@@ -184,7 +182,7 @@
     <div id="portofolio" class="container-fluid about py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
-                <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
+                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="bg-primary rounded position-relative overflow-hidden">
                         {{-- batas carousel --}}
                         @php
@@ -215,14 +213,14 @@
                         {{-- batas carousel --}}
                     </div>
                 </div>
-                <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
                     <div>
                         <h4 class="text-primary">Detail</h4>
                         <h1 class="display-5 mb-4">{{ $project->nama_project }}</h1>
                         <a href="/portofolio#daftar"
-                            class="btn btn-primary rounded-pill py-3 px-5 me-2 shrink-0">Kembali</a>
+                            class="btn btn-primary rounded-pill py-3 px-5 me-2 mb-2">Kembali</a>
                         <a href="{{ $project->link_project }}" target="blank"
-                            class="btn btn-warning rounded-pill py-3 px-5 shrink-0">Preview</a>
+                            class="btn btn-warning rounded-pill py-3 px-5 mb-2">Preview</a>
                     </div>
                 </div>
                 <p class="mb-4" style="text-align: justify;">{{ $project->deskripsi_project }}</p>
@@ -234,32 +232,52 @@
 
     <!-- brand -->
     <section id="clients" class="clients section-bg mb-5">
-        <div class="container">
-            <div class="row aos-init aos-animate" data-aos="zoom-in">
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/2.png" class="img-fluid w-75" alt="">
+        <div class="pb-5">
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row aos-init aos-animate" data-aos="zoom-in">
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/2.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/1.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/6.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/4.png" class="img-fluid w-75" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row aos-init aos-animate" data-aos="zoom-in">
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/8.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/7.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/3.png" class="img-fluid w-50" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/5.png" class="img-fluid w-50" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/1.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/6.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/4.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/8.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/7.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/3.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="/assets/img/5.png" class="img-fluid w-75" alt="">
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>

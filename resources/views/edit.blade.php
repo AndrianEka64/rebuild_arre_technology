@@ -60,8 +60,8 @@
             <label for="validationCustom01" class="form-label">Link Project</label>
         </div>
         <div class="col-md-9">
-            <input name="link" type="url" class="form-control" value="{{ $item->link_project }}"
-                id="validationCustom01" placeholder="Masukkan Link Project" required>
+            <input name="link" type="url" class="form-control" value="{{ $item->link_project }}" id="validationCustom01"
+                placeholder="Masukkan Link Project" required>
             <div class="invalid-feedback">
                 Mohon isi link project
             </div>

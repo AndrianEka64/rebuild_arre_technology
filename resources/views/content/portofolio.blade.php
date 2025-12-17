@@ -48,11 +48,12 @@
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
-    <div class="container-fluid topbar bg-light px-5 py-2 d-none d-lg-block">
+    {{-- <div class="container-fluid topbar bg-light px-5 py-2 d-none d-lg-block">
         <div class="row gx-0 align-items-center">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-flex flex-wrap">
-                    <a href="https://maps.app.goo.gl/zn1FuUMLmGJjffLt7" target="_blank" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Jl.
+                    <a href="https://maps.app.goo.gl/zn1FuUMLmGJjffLt7" target="_blank" class="text-muted small me-4"><i
+                            class="fas fa-map-marker-alt text-primary me-2"></i>Jl.
                         Suryat No.83, Gedog,
                         Kec. Sananwetan, Kota Blitar,
                         Jawa Timur 66132</a>
@@ -63,7 +64,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Topbar End -->
 
     <!-- Navbar & Hero Start -->
@@ -225,17 +226,17 @@
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-item">
                             <div class="service-img">
-                                <img src="{{ asset('image/' .json_decode($item->image, true)[0]) }}" class="img-fluid card-img-fixed w-100"
-                                    alt="Image">
+                                <img src="{{ asset('image/' . json_decode($item->image, true)[0]) }}"
+                                    class="img-fluid card-img-fixed w-100" alt="Image">
                             </div>
                             <div class="rounded-bottom p-4">
                                 <a href="/portofolio/detail/{{$item->id}}#portofolio"
                                     class="h4 d-inline-block mb-4">{{ $item->nama_project }}</a><br>
                                 <p class="mb-4">{{ Str::limit($item->deskripsi_project, '50') }}</p>
                                 <hr>
-                                <a href="/portofolio/detail/{{$item->id}}#portofolio" class="btn btn-primary me-2"
+                                <a href="/portofolio/detail/{{$item->id}}#portofolio" class="btn btn-outline-primary me-2"
                                     type="button">Detail</a>
-                                <a href="{{ $item->link_project }}" target="_blank" class="btn btn-warning"
+                                <a href="{{ $item->link_project }}" target="_blank" class="btn btn-outline-warning"
                                     type="button">Preview</a>
                             </div>
                         </div>
@@ -244,7 +245,7 @@
             </div>
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <a href="/beranda" class="btn btn-primary mb-4">Kembali</a>
+                    <a href="/" class="btn btn-primary mb-4">Kembali</a>
                 </div>
             </div>
         </div>
@@ -267,7 +268,8 @@
                             <div class="d-flex flex-column mb-3">
                                 <div class="p-2">
                                     <div class="d-flex justify-content-start">
-                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://maps.app.goo.gl/zn1FuUMLmGJjffLt7" target="_blank"><i
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3"
+                                            href="https://maps.app.goo.gl/zn1FuUMLmGJjffLt7" target="_blank"><i
                                                 class="bi bi-geo-alt-fill"></i></a>
                                         <h4>Lokasi :</h4>
                                     </div>
@@ -275,7 +277,8 @@
                                 </div>
                                 <div class="p-2">
                                     <div class="d-flex justify-content-start">
-                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="https://wa.me/6282231316699" target="_blank"><i
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3"
+                                            href="https://wa.me/6282231316699" target="_blank"><i
                                                 class="bi bi-telephone-fill"></i></a>
                                         <h4>Telepon/WA :</h4>
                                     </div>
@@ -322,32 +325,52 @@
 
     <!-- brand -->
     <section id="clients" class="clients section-bg mb-5">
-        <div class="container">
-            <div class="row aos-init aos-animate" data-aos="zoom-in">
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/2.png" class="img-fluid w-75" alt="">
+        <div class="pb-5">
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row aos-init aos-animate" data-aos="zoom-in">
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/2.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/1.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/6.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/4.png" class="img-fluid w-75" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row aos-init aos-animate" data-aos="zoom-in">
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/8.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/7.png" class="img-fluid w-75" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/3.png" class="img-fluid w-50" alt="">
+                            </div>
+                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
+                                <img src="/assets/img/5.png" class="img-fluid w-50" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/1.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/6.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/4.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/8.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/7.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/3.png" class="img-fluid w-75" alt="">
-                </div>
-                <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                    <img src="assets/img/5.png" class="img-fluid w-75" alt="">
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>

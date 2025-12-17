@@ -30,7 +30,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion mt-5 pt-5" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion mt-5 pt-5" id="accordionSidebar" style="background-color: #03254c">
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -87,7 +87,7 @@
                                 <input type="text" class="form-control bg-light border-0 small"
                                     placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
-                                    <button class="btn btn-success" type="button">
+                                    <button class="btn" style="background-color: #03254c; color: white;" type="button">
                                         <i class="fas fa-search fa-sm"></i>
                                     </button>
                                 </div>
@@ -130,7 +130,7 @@
                                 Semua statistik, progres Portofolio, dan informasi terbaru ditampilkan secara ringkas
                                 untuk memudahkan pengelolaan dan pemantauan.
                             </p>
-                            <div class="card text-white bg-success mb-3">
+                            <div class="card mb-3" style="background-color: #03254c; color: white;">
                                 <div class="card-body text-start">
                                     <div class="row">
                                         <div class="col-sm-2">
