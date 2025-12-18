@@ -220,7 +220,7 @@
                         <a href="/portofolio#daftar"
                             class="btn btn-primary rounded-pill py-3 px-5 me-2 mb-2">Kembali</a>
                         <a href="{{ $project->link_project }}" target="blank"
-                            class="btn btn-warning rounded-pill py-3 px-5 mb-2">Preview</a>
+                            class="btn btn-outline-primary rounded-pill py-3 px-5 mb-2">Preview</a>
                     </div>
                 </div>
                 <p class="mb-4" style="text-align: justify;">{{ $project->deskripsi_project }}</p>

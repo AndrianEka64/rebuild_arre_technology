@@ -935,13 +935,14 @@
 
 .btn-primary {
     background-color: #1167b1;
-    border-color: #1167b1;
+    border: 1.5px solid #1167b1;
+    color: #ffffff;
 }
 
 /* HOVER */
 .btn-primary:hover {
-    background-color: #000000 !important;
-    border-color: #1167b1 !important;
+    background-color: #ffffff !important;
+    border: 1.5px solid #1167b1!important;
     color: #1167b1 !important;
 }
 
@@ -949,9 +950,9 @@
 .btn-primary:active,
 .btn-primary.active,
 .btn-check:checked + .btn-primary {
-    background-color: #1167b1 !important;
-    border-color: #1167b1 !important;
-    color: #fff !important;
+    background-color: #ffffff !important;
+    border: 1.5px solid #1167b1 !important;
+    color: #1167b1 !important;
 }
 
 /* FOCUS */
