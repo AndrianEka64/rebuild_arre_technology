@@ -276,6 +276,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    {{-- script modal bawaan bootstrap --}}
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (() => {
@@ -297,11 +298,13 @@
             })
         })()
     </script>
+    {{-- data table --}}
     <script>
         $(document).ready(function () {
             $('#myTable').DataTable();
         });
     </script>
+    {{-- untuk delete data --}}
     <script>
         document.addEventListener('DOMContentLoaded', function () {
 
@@ -333,6 +336,7 @@
 
         });
     </script>
+    {{-- sweet alert data ketika berhasil/tidak --}}
     <script>
         @if(session('success'))
             Swal.fire({
@@ -352,6 +356,7 @@
             });
         @endif
     </script>
+    {{-- Edit Modal validasi gambar --}}
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             document.body.addEventListener('change', function (e) {

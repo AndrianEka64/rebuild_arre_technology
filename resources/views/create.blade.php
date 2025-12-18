@@ -60,6 +60,7 @@
         <button type="submit" class="btn btn-success">Simpan</button>
     </div>
 </form>
+{{-- script validasi gambar create --}}
 <script>
     document.getElementById('validationCustomUsername').addEventListener('change', function () {
         const files = this.files;

@@ -387,7 +387,7 @@
             <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="row aos-init aos-animate" data-aos="zoom-in">
+                        <div class="row" data-wow-delay="0.2s">
                             <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
                                 <img src="assets/img/2.png" class="img-fluid w-75" alt="">
                             </div>
@@ -403,7 +403,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="row aos-init aos-animate" data-aos="zoom-in">
+                        <div class="row">
                             <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
                                 <img src="assets/img/8.png" class="img-fluid w-75" alt="">
                             </div>
@@ -436,7 +436,7 @@
 
     <!-- FAQs Start -->
     <div class="container-fluid faq-section pb-5">
-        <div class="container pb-5 overflow-hidden">
+        <div class="container pb-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-primary">FAQ</h4>
                 <h1 class="display-5 mb-4">Pertanyaan yang Sering Diajukan</h1>
@@ -698,7 +698,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> --}}
     <script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
     <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>

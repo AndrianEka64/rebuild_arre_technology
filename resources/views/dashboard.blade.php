@@ -122,7 +122,7 @@
                     
                     <div class="row my-5">
                         <div class="col-sm-3">
-                            <img src="/assets/img/Dashboard-bro.svg" class="img-fluid"  alt="">
+                            <img src="/assets/img/Dashboard-bro.png" class="img-fluid"  alt="">
                         </div>
                         <div class="col-sm-9">
                             <h1 class="h3 mb-4 text-gray-800">Selamat Datang Di Dashboard!</h1>

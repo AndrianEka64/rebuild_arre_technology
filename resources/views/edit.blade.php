@@ -37,8 +37,14 @@
             @if (is_array($images))
                 <div class="d-flex gap-2 flex-wrap">
                     @foreach ($images as $i => $img)
-                        <img src="{{ asset('image/' . $img) }}" alt="Gambar {{ $i + 1 }}" class="img-thumbnail"
-                            style="width: 80px; height: auto;">
+                        <div class="position-relative">
+                            <img src="{{ asset('image/' . $img) }}" alt="Gambar {{ $i + 1 }}" class="img-thumbnail"
+                                style="width: 80px; height: auto;">
+                            <button type="button" class="btn btn-danger btn-sm position-absolute top-0 start-0 remove-image-btn" data-id="{{ $item->id }}"
+                                data-index="{{ $i }}">
+                                x
+                            </button>
+                        </div>
                     @endforeach
                 </div>
             @endif

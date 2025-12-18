@@ -39,7 +39,7 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block">
-                                <img src="{{ asset('assets/img/Login-cuate.svg') }}" class="img-fluid w-100" alt="">
+                                <img src="{{ asset('assets/img/Login-cuate.png') }}" class="img-fluid w-100" alt="">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
