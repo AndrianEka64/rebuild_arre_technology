@@ -115,6 +115,20 @@ class ProjectController extends Controller
             $data = project::find($id);
             $imageold = $data->image ? json_decode($data->image, true) : [];
             $images = $imageold;
+            if ($request->filled('hapus_gambar')) {
+                $hapusIndex = explode(',', $request->hapus_gambar);
+
+                foreach ($hapusIndex as $i) {
+                    if (isset($images[$i])) {
+                        if (file_exists(public_path('image/' . $images[$i]))) {
+                            unlink(public_path('image/' . $images[$i]));
+                        }
+                        unset($images[$i]);
+                    }
+                }
+
+                $images = array_values($images);
+            }
             if ($request->hasFile('image')) {
                 foreach ($request->file('image') as $index => $file) {
                     if (isset($images[$index]) && file_exists(public_path('image/' . $images[$index]))) {
@@ -144,18 +158,18 @@ class ProjectController extends Controller
         project::find($id)->delete();
         return redirect('/dashboard/table');
     }
-    public function hapusgambar($id, $index)
-    {
-        $data = project::find($id);
-        $images = $data->image ? json_decode($data->image, true) : [];
-        if (isset($images[$index])) {
-            if (file_exists(public_path('image/' . $images[$index]))) {
-                unlink(public_path('image/' . $images[$index]));
-            }
-            unset($images[$index]);
-            $data->image = json_encode(array_values($images));
-            $data->save();
-        }
-        return redirect('/dashboard/table')->with('success', 'Gambar berhasil dihapus!');
-    }
+    // public function hapusgambar($id, $index)
+    // {
+    //     $data = project::find($id);
+    //     $images = $data->image ? json_decode($data->image, true) : [];
+    //     if (isset($images[$index])) {
+    //         if (file_exists(public_path('image/' . $images[$index]))) {
+    //             unlink(public_path('image/' . $images[$index]));
+    //         }
+    //         unset($images[$index]);
+    //         $data->image = json_encode(array_values($images));
+    //         $data->save();
+    //     }
+    //     return redirect('/dashboard/table')->with('success', 'Gambar berhasil dihapus!');
+    // }
 }

@@ -40,9 +40,12 @@
                         <div class="position-relative">
                             <img src="{{ asset('image/' . $img) }}" alt="Gambar {{ $i + 1 }}" class="img-thumbnail"
                                 style="width: 80px; height: auto;">
-                            <a href="/dashboard/hapusgambar/{{ $item->id }}/{{ $i }}" type="button" class="btn btn-danger btn-sm position-absolute top-0 start-0 remove-image-btn">
+                            <button type="button" class="btn btn-danger btn-sm position-absolute top-0 start-0 remove-image-btn"
+                                data-index="{{ $i }}">×</button>
+                            {{-- <a href="/dashboard/hapusgambar/{{ $item->id }}/{{ $i }}" type="button"
+                                class="btn btn-danger btn-sm position-absolute top-0 start-0 remove-image-btn">
                                 x
-                            </a>
+                            </a> --}}
                         </div>
                     @endforeach
                 </div>
@@ -51,6 +54,7 @@
             <div class="input-group has-validation">
                 <input name="image[]" type="file" class="form-control" id="validationCustomUsername"
                     aria-describedby="inputGroupPrepend" accept=".png,.jpg,.jpeg" multiple>
+                <input type="hidden" name="hapus_gambar" id="hapus_gambar">
                 <div class="invalid-feedback">
                     Mohon masukkan gambar
                 </div>
@@ -77,3 +81,23 @@
         <button class="btn btn-success" type="submit">Simpan</button>
     </div>
 </form>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let removedImages = [];
+
+        document.querySelectorAll('.remove-image-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const index = this.dataset.index;
+
+                // simpan index gambar yg dihapus
+                removedImages.push(index);
+
+                // update input hidden
+                document.getElementById('hapus_gambar').value = removedImages.join(',');
+
+                // hapus tampilan gambar (tanpa reload)
+                this.closest('.position-relative').remove();
+            });
+        });
+    });
+</script>
