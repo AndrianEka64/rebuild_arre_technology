@@ -17,7 +17,8 @@ Route::middleware('auth')->group(function(){
     Route::post('/dashboard/store',[ProjectController::class,'store']);
     Route::get('/dashboard/edit/{id}',[ProjectController::class,'edit']);
     Route::post('/dashboard/update/{id}',[ProjectController::class,'update']);
-    Route::get('/dasboard/delete/{id}',[ProjectController::class,'destroy']);
+    Route::get('/dashboard/delete/{id}',[ProjectController::class,'destroy']);
+    Route::get('/dashboard/hapusgambar/{id}/{index}',[ProjectController::class,'hapusgambar']);
 });
 
 // Route::get('/index/login', [AuthController::class, 'showlogin']);

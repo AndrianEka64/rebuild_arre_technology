@@ -40,10 +40,9 @@
                         <div class="position-relative">
                             <img src="{{ asset('image/' . $img) }}" alt="Gambar {{ $i + 1 }}" class="img-thumbnail"
                                 style="width: 80px; height: auto;">
-                            <button type="button" class="btn btn-danger btn-sm position-absolute top-0 start-0 remove-image-btn" data-id="{{ $item->id }}"
-                                data-index="{{ $i }}">
+                            <a href="/dashboard/hapusgambar/{{ $item->id }}/{{ $i }}" type="button" class="btn btn-danger btn-sm position-absolute top-0 start-0 remove-image-btn">
                                 x
-                            </button>
+                            </a>
                         </div>
                     @endforeach
                 </div>

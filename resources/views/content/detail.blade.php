@@ -223,7 +223,7 @@
                             class="btn btn-outline-primary rounded-pill py-3 px-5 mb-2">Preview</a>
                     </div>
                 </div>
-                <p class="mb-4" style="text-align: justify;">{{ $project->deskripsi_project }}</p>
+                <p class="mb-4" style="white-space: pre-line; text-align: justify;">{{ $project->deskripsi_project }}</p>
                 <hr>
             </div>
         </div>
