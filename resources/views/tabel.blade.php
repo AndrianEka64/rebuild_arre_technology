@@ -328,7 +328,7 @@
                     }).then((result) => {
                         if (result.isConfirmed) {
                             // Redirect ke URL delete Laravel
-                            window.location.href = `/dasboard/delete/${id}`;
+                            window.location.href = `/dashboard/delete/${id}`;
                         }
                     });
                 });
@@ -398,6 +398,21 @@
             });
         });
     </script>
+    {{-- Sweet Alert success untuk hapus data --}}
+    @if (session('successs'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Berhasil!',
+                    text: '{{ session('successs') }}',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+            });
+        </script>
+    @endif
+
 </body>
 
 </html>

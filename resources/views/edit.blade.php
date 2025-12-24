@@ -54,7 +54,7 @@
             <div class="input-group has-validation">
                 <input name="image[]" type="file" class="form-control" id="validationCustomUsername"
                     aria-describedby="inputGroupPrepend" accept=".png,.jpg,.jpeg" multiple>
-                <input type="hidden" name="hapus_gambar" id="hapus_gambar">
+                <input type="hidden" name="hapus_gambar" class="hapus-gambar-input">
                 <div class="invalid-feedback">
                     Mohon masukkan gambar
                 </div>
@@ -83,21 +83,30 @@
 </form>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        let removedImages = [];
 
         document.querySelectorAll('.remove-image-btn').forEach(btn => {
             btn.addEventListener('click', function () {
+
                 const index = this.dataset.index;
 
-                // simpan index gambar yg dihapus
+                // ambil modal tempat tombol ini berada
+                const modal = this.closest('.modal');
+
+                // ambil hidden input di modal ini saja
+                const hiddenInput = modal.querySelector('.hapus-gambar-input');
+
+                let removedImages = hiddenInput.value
+                    ? hiddenInput.value.split(',')
+                    : [];
+
                 removedImages.push(index);
 
-                // update input hidden
-                document.getElementById('hapus_gambar').value = removedImages.join(',');
+                hiddenInput.value = removedImages.join(',');
 
-                // hapus tampilan gambar (tanpa reload)
+                // hapus tampilan gambar
                 this.closest('.position-relative').remove();
             });
         });
+
     });
 </script>

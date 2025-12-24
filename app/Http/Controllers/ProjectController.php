@@ -156,7 +156,7 @@ class ProjectController extends Controller
     public function destroy($id)
     {
         project::find($id)->delete();
-        return redirect('/dashboard/table');
+        return redirect('/dashboard/table')->with('successs', 'Project berhasil dihapus!');
     }
     // public function hapusgambar($id, $index)
     // {
