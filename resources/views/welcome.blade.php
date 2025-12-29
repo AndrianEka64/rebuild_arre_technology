@@ -115,7 +115,7 @@
                                                     class="fab fa-facebook-f"></i></a>
                                             <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://www.instagram.com/arre.tech/" target="_blank"><i
                                                     class="fab fa-instagram"></i></a>
                                             <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i
                                                     class="fab fa-linkedin-in"></i></a>
@@ -151,7 +151,7 @@
                                                     class="fab fa-facebook-f"></i></a>
                                             <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
                                                     class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i
+                                            <a class="btn btn-md-square btn-light rounded-circle mx-2" href="https://www.instagram.com/arre.tech/" target="_blank"><i
                                                     class="fab fa-instagram"></i></a>
                                             <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i
                                                     class="fab fa-linkedin-in"></i></a>
@@ -336,7 +336,7 @@
     <!-- Services End -->
 
     <!-- Portofolio Start -->
-    <div id="portofolio" class="service pb-5">
+    <div id="portofolio" class="container-fluid service pb-5">
         <div class="container pb-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-primary">Portofolio</h4>
@@ -376,58 +376,67 @@
     <!-- Portofolio End -->
 
     <!-- brand -->
-    <section id="clients" class="clients section-bg pb-5">
-        <div class=" pb-5">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary">Clients</h4>
-                <h1 class="display-5 mb-4">Clients Kami</h1>
-                <p class="mb-0"> Kami telah bekerjasama dengan beberapa klien terbaik.
-                </p>
-            </div>
-            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+    <section id="clients" class="clients section-bg mb-5">
+        <div class="container" data-aos="zoom-in">
+            <div id="carouselClients" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+                data-bs-pause="hover">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="row" data-wow-delay="0.2s">
-                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                                <img src="assets/img/2.png" class="img-fluid w-75" alt="">
+                        <div class="row align-items-center justify-content-center g-4">
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="client-logo">
+                                    <img src="/assets/img/1.png" alt="">
+                                </div>
                             </div>
-                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                                <img src="assets/img/1.png" class="img-fluid w-75" alt="">
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="client-logo">
+                                    <img src="/assets/img/2.png" alt="">
+                                </div>
                             </div>
-                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                                <img src="assets/img/6.png" class="img-fluid w-75" alt="">
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="client-logo">
+                                    <img src="/assets/img/3.png" alt="">
+                                </div>
                             </div>
-                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                                <img src="assets/img/4.png" class="img-fluid w-75" alt="">
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="client-logo">
+                                    <img src="/assets/img/4.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                                <img src="assets/img/8.png" class="img-fluid w-75" alt="">
+                        <div class="row align-items-center justify-content-center g-4">
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="client-logo">
+                                    <img src="/assets/img/5.png" alt="">
+                                </div>
                             </div>
-                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                                <img src="assets/img/7.png" class="img-fluid w-75" alt="">
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="client-logo">
+                                    <img src="/assets/img/6.png" alt="">
+                                </div>
                             </div>
-                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                                <img src="assets/img/3.png" class="img-fluid w-50" alt="">
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="client-logo">
+                                    <img src="/assets/img/7.png" alt="">
+                                </div>
                             </div>
-                            <div class="col-lg-3 col-md-5 col-6 d-flex align-items-center justify-content-center mb-5">
-                                <img src="assets/img/5.png" class="img-fluid w-50" alt="">
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="client-logo">
+                                    <img src="/assets/img/8.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselClients"
                     data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselClients"
                     data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
         </div>
@@ -698,7 +707,8 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> --}}
+    {{--
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> --}}
     <script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
     <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>

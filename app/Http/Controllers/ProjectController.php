@@ -20,7 +20,7 @@ class ProjectController extends Controller
 
     public function lihat()
     {
-        $project = project::limit(6)->get();
+        $project = project::latest()->limit(6)->get();
         // dd($project);
         return view('welcome', compact('project'));
     }

@@ -1005,3 +1005,25 @@
 [class*="btn-outline-primary"] {
     border-color: #1167b1 !important;
 }
+
+.clients .carousel-item {
+  min-height: 140px;
+}
+
+.client-logo {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-logo img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.client-logo img:hover {
+  transform: scale(1.1);
+}
